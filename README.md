@@ -5,7 +5,7 @@ Web Gimnasio Bekdoosan
 
 Bienvenido al sitio web oficial del gimnasio **BEKDOOSAN**, enfocado en **entrenamiento funcional**. Esta aplicación fue desarrollada en **React.js** y tiene como objetivo ofrecer información clara y visual sobre nuestros programas de entrenamiento, contacto y presencia en redes sociales.
 
-![Entrenamiento Funcional](./ruta-a-tu-imagen/Captura-de-pantalla-2025-05-30-154024.png)
+![Entrenamiento Funcional](https://github.com/sergioironhacker/Gimnasio-Bekdoosan/blob/main/imgs/Captura%20de%20pantalla%202025-05-30%20163902.png?raw=true)
 
 ---
 
