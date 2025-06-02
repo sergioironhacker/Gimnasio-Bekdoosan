@@ -3,21 +3,21 @@ import { motion } from 'framer-motion';
 
 const teamData = [
   {
-    imgSrc: "imgs/cute-cool-boy-dabbing-pose-dibujos-animados-vector-icono-ilustracion-concepto-icono-moda-personas-aislado_138676-5680.avif",
+    imgSrc: "/imgs/cute-cool-boy-dabbing-pose-dibujos-animados-vector-icono-ilustracion-concepto-icono-moda-personas-aislado_138676-5680.avif",
     alt: "Entrenador personal especializado en musculación, estilo pastel",
     name: "Sergio ",
     role: "Entrenador Personal",
     description: "Especialista en musculación y preparación física con más de 8 años de experiencia."
   },
   {
-    imgSrc: "imgs/500_333.jpeg",
+    imgSrc: "/imgs/500_333.jpeg",
     alt: "Instructora de clases grupales sonriendo, ambiente pastel",
     name: "Rosa ",
     role: "Instructora de Clases Grupales",
     description: "Experta en zumba, pilates y actividades grupales. Certificada en múltiples disciplinas."
   },
   {
-    imgSrc: "imgs/1554542899025.jpg",
+    imgSrc: "/imgs/1554542899025.jpg",
     alt: "Nutricionista deportivo profesional, entorno pastel",
     name: "Edu Baeza",
     role: "Asesor Nutricional",

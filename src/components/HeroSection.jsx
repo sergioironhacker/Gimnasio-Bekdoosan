@@ -29,7 +29,7 @@ const slidesData = [
     title: "Comunidad y Motivación",
     subtitle: "Entrena en un ambiente positivo",
     description: "Únete a nuestra comunidad y encuentra la motivación que necesitas.",
-    imgSrc: "imgs/Norte.webp",
+    imgSrc: "/imgs/Norte.webp",
     imgAlt: "Grupo de personas entrenando juntas en el gimnasio"
   },
   {

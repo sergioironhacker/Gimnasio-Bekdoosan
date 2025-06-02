@@ -2,7 +2,7 @@ import React from 'react';
 import { Instagram, Facebook, Youtube } from 'lucide-react';
 
 const CURRENT_LOGO_URL = "https://storage.googleapis.com/hostinger-horizons-assets-prod/a14242c5-6147-4c01-83f7-9f89e1b62041/bbcfd84f011fe90160e5a70ac2732acd.png";
-const WODBUSTER_LOGO_URL = "imgs/images.png";
+const WODBUSTER_LOGO_URL = "/imgs/images.png";
 const PLAY_STORE_LOGO_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png";
 const APP_STORE_LOGO_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png";
 
