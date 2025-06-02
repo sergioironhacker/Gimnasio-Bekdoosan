@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Smartphone, CalendarCheck, BarChart2, UserCheck, DownloadCloud } from 'lucide-react';
 
-const WODBUSTER_LOGO_URL = "https://storage.googleapis.com/hostinger-horizons-assets-prod/a14242c5-6147-4c01-83f7-9f89e1b62041/f4b086e16f8b7205af219e04d24d29f7.png";
+const WODBUSTER_LOGO_URL = "";
 const PLAY_STORE_LOGO_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png";
 const APP_STORE_LOGO_URL = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png";
 
@@ -25,7 +25,7 @@ const AppSection = ({ scrollToSection }) => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <img src={WODBUSTER_LOGO_URL} alt="WodBuster Logo" className="h-12 sm:h-16 w-auto mx-auto mb-6 object-contain" />
+         {/*  <img src={WODBUSTER_LOGO_URL} alt="WodBuster Logo" className="h-12 sm:h-16 w-auto mx-auto mb-6 object-contain" /> */}
           <h2 className="text-4xl md:text-5xl font-bold text-pastel-gray-dark mb-4">
             Gestiona tu Fitness con <span className="text-gradient-pastel">WodBuster</span>
           </h2>
@@ -71,7 +71,7 @@ const AppSection = ({ scrollToSection }) => {
             <img  
               className="max-w-xs md:max-w-sm rounded-lg shadow-2xl mb-8"
               alt="Smartphone mostrando la app WodBuster en Gimnasio Bekdoosan"
-             src="https://images.unsplash.com/photo-1580974928074-aea918997b33?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=60" />
+             src="imgs/images.png" />
             <p className="text-lg text-pastel-gray-dark font-semibold mb-4">Descárgala ahora:</p>
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <a href="https://play.google.com/store/apps/details?id=com.wodbuster.app" target="_blank" rel="noopener noreferrer" aria-label="Descargar en Google Play">

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
-const LOGO_URL = "https://storage.googleapis.com/hostinger-horizons-assets-prod/a14242c5-6147-4c01-83f7-9f89e1b62041/bbcfd84f011fe90160e5a70ac2732acd.png";
+const LOGO_URL = "imgs/logo-main.png";
 
 const Navbar = ({ scrollToSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

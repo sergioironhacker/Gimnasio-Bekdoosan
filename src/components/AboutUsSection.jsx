@@ -3,23 +3,23 @@ import { motion } from 'framer-motion';
 
 const teamData = [
   {
-    imgSrc: "https://images.unsplash.com/photo-1657607545811-0aceb37aee1d",
+    imgSrc: "imgs/cute-cool-boy-dabbing-pose-dibujos-animados-vector-icono-ilustracion-concepto-icono-moda-personas-aislado_138676-5680.avif",
     alt: "Entrenador personal especializado en musculación, estilo pastel",
-    name: "Carlos Martínez",
+    name: "Sergio ",
     role: "Entrenador Personal",
     description: "Especialista en musculación y preparación física con más de 8 años de experiencia."
   },
   {
-    imgSrc: "https://images.unsplash.com/photo-1682530675887-4b16a42e4e1e",
+    imgSrc: "imgs/500_333.jpeg",
     alt: "Instructora de clases grupales sonriendo, ambiente pastel",
-    name: "Ana García",
+    name: "Rosa ",
     role: "Instructora de Clases Grupales",
     description: "Experta en zumba, pilates y actividades grupales. Certificada en múltiples disciplinas."
   },
   {
-    imgSrc: "https://images.unsplash.com/photo-1691917996877-7a56427c4642",
+    imgSrc: "imgs/1554542899025.jpg",
     alt: "Nutricionista deportivo profesional, entorno pastel",
-    name: "Miguel Rodríguez",
+    name: "Edu Baeza",
     role: "Asesor Nutricional",
     description: "Nutricionista deportivo especializado en planes alimentarios para objetivos fitness."
   }
@@ -87,7 +87,7 @@ const AboutUsSection = () => {
           >
             <img  
               className="w-full h-96 object-cover rounded-2xl shadow-xl"
-              src="https://images.unsplash.com/photo-1635863962988-25f3a34ea63a"
+              src="imgs/lg_42e0d983-7c7d-46b0-9b10-2971fd5ce0a5_DSC.avif"
               alt="Equipo de entrenadores profesionales del gimnasio en tonos pastel" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-2xl"></div>
           </motion.div>
