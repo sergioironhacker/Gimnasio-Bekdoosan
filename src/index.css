@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 60% 98%; /* Pastel Azul Cielo Suave */
+    --foreground: 220 15% 25%; /* Pastel Gris Oscuro */
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 25%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 25%;
+    --primary: 150 56% 75%; /* Pastel Verde Menta */
+    --primary-foreground: 220 15% 25%; 
+    --secondary: 255 60% 90%; /* Pastel Lila Claro */
+    --secondary-foreground: 220 15% 25%;
+    --muted: 39 50% 92%; /* Pastel Beige */
+    --muted-foreground: 220 10% 45%;
+    --accent: 0 80% 85%; /* Pastel Rosa Empolvado */
+    --accent-foreground: 220 15% 25%;
+    --destructive: 0 84.2% 60.2%; /* Original Red, can be adjusted to pastel if needed */
+    --destructive-foreground: 210 40% 98%;
+    --border: 210 30% 85%; /* Pastel Gris Claro */
+    --input: 210 30% 85%; /* Pastel Gris Claro */
+    --ring: 150 56% 75%; /* Pastel Verde Menta */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 220 15% 10%;
+    --foreground: 210 60% 98%;
+    --card: 220 15% 15%;
+    --card-foreground: 210 60% 98%;
+    --popover: 220 15% 10%;
+    --popover-foreground: 210 60% 98%;
+    --primary: 150 56% 65%;
+    --primary-foreground: 220 15% 15%;
+    --secondary: 255 60% 80%;
+    --secondary-foreground: 220 15% 15%;
+    --muted: 39 50% 20%;
+    --muted-foreground: 220 10% 70%;
+    --accent: 0 80% 75%;
+    --accent-foreground: 220 15% 15%;
+    --destructive: 0 62.8% 40.2%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 220 15% 30%;
+    --input: 220 15% 30%;
+    --ring: 150 56% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .gradient-bg-pastel {
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.8) 0%, hsl(var(--secondary) / 0.8) 50%, hsl(var(--accent) / 0.8) 100%);
+  }
+  
+  .glass-effect {
+    background: hsla(var(--background), 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsla(var(--border), 0.5);
+  }
+  
+  .text-gradient-pastel {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px hsla(var(--foreground), 0.1);
+  }
+  
+  .floating-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+  
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-slide {
+  min-width: 100%;
+  position: relative;
+}
