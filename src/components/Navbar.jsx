@@ -1,77 +1,122 @@
-import React, { useState } from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
-const LOGO_URL = "/imgs/logo-main.png";
+const LOGO_URL = "https://storage.googleapis.com/hostinger-horizons-assets-prod/a14242c5-6147-4c01-83f7-9f89e1b62041/bbcfd84f011fe90160e5a70ac2732acd.png";
 
-const Navbar = ({ scrollToSection }) => {
+const Navbar = ({ scrollToSection, activeSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const navItems = ['inicio', 'tarifas', 'horarios', 'actividades', 'app', 'nosotros', 'ubicacion', 'contacto'];
+  const navItems = [
+    { id: 'inicio', label: 'Inicio' },
+    { id: 'tarifas', label: 'Tarifas' },
+    { id: 'horarios', label: 'Horarios' },
+    { id: 'actividades', label: 'Actividades' },
+    { id: 'app', label: 'Nuestra App' },
+    { id: 'nosotros', label: 'Nosotros' },
+    { id: 'ubicacion', label: 'Ubicación' },
+    { id: 'contacto', label: 'Contacto' },
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinkClasses = (itemId) => 
+    `relative font-medium transition-colors capitalize text-xs lg:text-sm px-2 py-1 rounded-md 
+     ${activeSection === itemId 
+       ? 'text-pastel-pink font-bold' 
+       : 'text-pastel-gray-dark hover:text-pastel-mint'
+     }`;
+
+  const activeIndicator = (itemId) =>
+    activeSection === itemId && (
+      <motion.div
+        layoutId="activeIndicatorNavbar"
+        className="absolute bottom-0 left-0 right-0 h-0.5 bg-pastel-pink"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      />
+    );
+  
+  const handleMobileLinkClick = (sectionId) => {
+    setIsMenuOpen(false); // Close menu first
+    // Delay scroll slightly to allow menu to close visually, prevents jumpiness
+    setTimeout(() => {
+      scrollToSection(sectionId);
+    }, 100); 
+  };
 
   return (
-    <nav className="fixed top-0 w-full bg-pastel-beige/95 backdrop-blur-md shadow-md z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
-
-          {/* Logo */}
+    <nav className={`fixed top-0 w-full bg-pastel-beige/95 backdrop-blur-md z-50 transition-shadow duration-300 ${isScrolled ? 'shadow-lg' : 'shadow-sm'}`}>
+      <div className="container-custom">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.5 }}
             className="flex items-center cursor-pointer"
             onClick={() => scrollToSection('inicio')}
           >
-            <img src={LOGO_URL} alt="Logo Bekdoosan" className="h-12 sm:h-16 w-auto mr-2 sm:mr-4 object-contain" />
-            <span className="text-lg sm:text-2xl font-bold text-pastel-gray-dark hidden sm:block">
+            <img src={LOGO_URL} alt="Gimnasio Bekdoosan Logo" className="h-12 sm:h-16 w-auto mr-2 object-contain" />
+            <span className="text-lg sm:text-xl font-bold text-pastel-gray-dark hidden xs:block">
               Gimnasio Bekdoosan
             </span>
           </motion.div>
 
-          {/* Menu desktop */}
-          <div className="hidden md:flex space-x-4 lg:space-x-6">
+          <div className="hidden md:flex items-center space-x-2 lg:space-x-3">
             {navItems.map((item) => (
               <button
-                key={item}
-                onClick={() => scrollToSection(item)}
-                className="text-pastel-gray-dark hover:text-pastel-mint font-medium transition-colors capitalize text-sm"
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className={navLinkClasses(item.id)}
+                aria-current={activeSection === item.id ? "page" : undefined}
               >
-                {item}
+                {item.label}
+                {activeIndicator(item.id)}
               </button>
             ))}
           </div>
 
-          {/* Mobile toggle */}
           <button
-            className="md:hidden text-pastel-gray-dark"
+            className="md:hidden text-pastel-gray-dark p-2 -mr-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={isMenuOpen}
           >
-            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-pastel-beige border-t border-pastel-gray-light"
+            className="md:hidden bg-pastel-beige border-t border-pastel-gray-light shadow-md"
           >
-            <div className="px-4 py-4 space-y-2">
+            <div className="px-4 py-3 space-y-1">
               {navItems.map((item) => (
                 <button
-                  key={item}
-                  onClick={() => {
-                    scrollToSection(item);
-                    setIsMenuOpen(false);
-                  }}
-                  className="block w-full text-left px-3 py-2 text-pastel-gray-dark hover:text-pastel-mint hover:bg-pastel-lila-light/50 rounded-md transition-all capitalize text-base"
+                  key={item.id}
+                  onClick={() => handleMobileLinkClick(item.id)}
+                  className={`block w-full text-left px-3 py-2.5 rounded-md transition-colors capitalize text-sm
+                    ${activeSection === item.id 
+                      ? 'bg-pastel-lila-light/70 text-pastel-pink font-semibold' 
+                      : 'text-pastel-gray-dark hover:text-pastel-mint hover:bg-pastel-lila-light/30'
+                    }`}
+                  aria-current={activeSection === item.id ? "page" : undefined}
                 >
-                  {item}
+                  {item.label}
                 </button>
               ))}
             </div>
