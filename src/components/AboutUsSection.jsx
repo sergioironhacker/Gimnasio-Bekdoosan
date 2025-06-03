@@ -89,13 +89,17 @@ const AboutUsSection = () => {
             viewport={{ once: true }}
             className="relative order-1 lg:order-2"
           >
-            <img  
-              className="w-full h-72 sm:h-96 object-cover rounded-2xl shadow-xl"
-              src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-              alt="Interior del Gimnasio Bekdoosan con ambiente energético" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
-          </motion.div>
-        </div>
+          
+
+       
+  <img  
+    className="w-full h-auto object-contain rounded-2xl"
+    src="/imgs/Captura de pantalla 2025-05-30 163902.png"
+    alt="Interior del Gimnasio Bekdoosan con ambiente energético"
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+   </motion.div>
+</div>
 
         <div>
           <h3 className="text-2xl sm:text-3xl font-bold text-center text-pastel-gray-dark mb-8 sm:mb-12">Nuestro Equipo</h3>
