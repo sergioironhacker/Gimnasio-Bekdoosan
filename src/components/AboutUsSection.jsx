@@ -4,27 +4,27 @@ import { motion } from 'framer-motion';
 const teamData = [
   {
     id: 'trainer1',
-    imgSrc: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    imgSrc: "/imgs/1554542899025.jpg",
     alt: "Entrenador personal sonriente en el gimnasio",
-    name: "Carlos Martínez",
-    role: "Entrenador Principal",
-    description: "Con más de 15 años de experiencia, Carlos te guiará para superar tus límites y alcanzar tus metas de fuerza y condición física."
+    name: "Edu Baeza",
+    role: "Experto en biceps",
+    description: "Con más de 15 años de experiencia, Edu te guiará para superar tus límites y alcanzar tus metas de fuerza y condición física."
   },
   {
     id: 'trainer2',
     imgSrc: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
     alt: "Instructora de yoga y pilates en pose",
-    name: "Sofía López",
+    name: "Rosa",
     role: "Instructora de Bienestar",
     description: "Experta en Yoga, Pilates y TRX. Sofía te ayudará a encontrar el equilibrio entre cuerpo y mente con clases dinámicas y revitalizantes."
   },
   {
     id: 'trainer3',
-    imgSrc: "https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    imgSrc: "/imgs/images.jpg",
     alt: "Especialista en artes marciales y nutrición",
-    name: "David Kim",
+    name: "Eutimio",
     role: "Artes Marciales y Nutrición",
-    description: "Cinturón negro en Taekwondo y Jiu Jitsu, David combina su pasión por las artes marciales con conocimientos en nutrición deportiva."
+    description: "Cinturón negro en Taekwondo y Jiu Jitsu, Eutimio combina su pasión por las artes marciales con conocimientos en nutrición deportiva."
   }
 ];
 
