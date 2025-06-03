@@ -21,63 +21,63 @@ const activitiesData = [
   {
     name: "Artes Marciales Élite",
     description: "Taekwondo, Jiu Jitsu, Kick Boxing. Aprende disciplina, defensa personal y supera tus límites.",
-    icon: Shield // Changed from Star
+    icon: Shield
   }
 ];
 
 const gallerySlides = [
   {
     id: 'gallery1',
-    src: "https://images.unsplash.com/photo-1595235384607-1b28167f8d2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    src: "public/imgs/1.png",
     alt: "Área de musculación con pesas y máquinas en tonos pastel",
     title: "Zona de Musculación Avanzada",
     subtitle: "Equipos de última generación para tus rutinas de fuerza."
   },
   {
     id: 'gallery2',
-    src: "https://images.unsplash.com/photo-1660921033451-ff4c849bfc99?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    src: "/imgs/2.jpg",
     alt: "Sala de cardio con cintas y bicicletas en ambiente pastel",
     title: "Espacio Cardio Total",
     subtitle: "Mejora tu resistencia y salud cardiovascular al máximo."
   },
   {
     id: 'gallery3',
-    src: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    src: "/imgs/3.jpg",
     alt: "Clase de entrenamiento funcional con cuerdas",
     title: "Entrenamiento Funcional Dinámico",
     subtitle: "Desarrolla fuerza, agilidad y coordinación."
   },
   {
     id: 'gallery4',
-    src: "https://images.unsplash.com/photo-1552674605-db6ffd5ca5b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    src: "/imgs/4.jpg",
     alt: "Practicantes de artes marciales en una clase intensa",
     title: "Dojo de Artes Marciales",
     subtitle: "Taekwondo, Jiu Jitsu, Kick Boxing. ¡Desafía tus límites!"
   },
   {
     id: 'gallery5',
-    src: "https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    src: "/imgs/5.jpg",
     alt: "Clase de yoga en un ambiente tranquilo y luminoso con varias personas",
     title: "Estudio de Yoga y Pilates",
     subtitle: "Conecta cuerpo y mente, encuentra tu equilibrio interior."
   },
   {
     id: 'gallery6',
-    src: "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    src: "/imgs/6.png",
     alt: "Entrenamiento funcional con TRX en el gimnasio de forma intensa",
     title: "Zona TRX y Funcional",
     subtitle: "Fortalece todo tu cuerpo de forma integral y efectiva."
   },
   {
     id: 'gallery7',
-    src: "https://images.unsplash.com/photo-1549060279-7e168fcee0c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    src: "/imgs/7.png",
     alt: "Clase de spinning con bicicletas estáticas y luces de neón",
     title: "Sala de Ciclo Indoor Épica",
     subtitle: "Pedalea al ritmo de la música y supera tus marcas."
   },
   {
     id: 'gallery8',
-    src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    src: "/imgs/8.png",
     alt: "Entrenador personal guiando a un cliente en el gimnasio",
     title: "Asesoramiento Personalizado",
     subtitle: "Nuestros expertos te ayudan a alcanzar tus metas."
@@ -94,14 +94,13 @@ const ActivitiesSection = ({ openLightbox }) => {
   const prevGallerySlide = () => {
     setCurrentGallerySlide((prev) => (prev - 1 + gallerySlides.length) % gallerySlides.length);
   };
-  
+
   useEffect(() => {
     const timer = setInterval(() => {
       nextGallerySlide();
-    }, 4500); // Slightly faster auto-scroll for gallery
+    }, 4500);
     return () => clearInterval(timer);
   }, []);
-
 
   return (
     <section id="actividades" className="section-padding bg-pastel-lila-light/30">
@@ -142,57 +141,54 @@ const ActivitiesSection = ({ openLightbox }) => {
 
         <div className="mt-16 sm:mt-20">
           <h3 className="text-2xl sm:text-3xl font-bold text-center text-pastel-gray-dark mb-8 sm:mb-12">Galería de Momentos Bekdoosan</h3>
-          <div className="relative slider-container h-72 sm:h-80 md:h-96 rounded-2xl shadow-xl overflow-hidden">
+          <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] max-h-[32rem] mx-auto rounded-2xl shadow-xl overflow-hidden">
             <AnimatePresence initial={false} custom={currentGallerySlide}>
               {gallerySlides.map((slide, index) => (
                 index === currentGallerySlide && (
                   <motion.div
                     key={slide.id}
-                    className="slider-slide h-full absolute inset-0 cursor-pointer group"
+                    className="absolute inset-0 w-full h-full flex items-center justify-center cursor-pointer group"
                     initial={{ opacity: 0, x: 200 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -200 }}
                     transition={{ duration: 0.5, ease: "circOut" }}
                     onClick={() => openLightbox(slide.src)}
                   >
-                    <img  
-                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                    <img
+                      className="w-full h-full object-contain"
                       src={slide.src}
-                      alt={slide.alt} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex flex-col justify-end p-4 sm:p-6">
-                      <h4 className="text-lg sm:text-xl font-bold text-white drop-shadow-md">{slide.title}</h4>
-                      <p className="text-xs sm:text-sm text-gray-200 drop-shadow-sm">{slide.subtitle}</p>
-                    </div>
+                      alt={slide.alt}
+                    />
                   </motion.div>
                 )
               ))}
             </AnimatePresence>
             <button
-                onClick={prevGallerySlide}
-                className="absolute left-2 sm:left-3 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white text-pastel-gray-dark p-1.5 sm:p-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-pastel-mint"
-                aria-label="Anterior"
+              onClick={prevGallerySlide}
+              className="absolute left-2 sm:left-3 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white text-pastel-gray-dark p-1.5 sm:p-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-pastel-mint"
+              aria-label="Anterior"
             >
-                <ChevronLeft size={20} smSize={24} />
+              <ChevronLeft size={20} />
             </button>
             <button
-                onClick={nextGallerySlide}
-                className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white text-pastel-gray-dark p-1.5 sm:p-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-pastel-mint"
-                aria-label="Siguiente"
+              onClick={nextGallerySlide}
+              className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white text-pastel-gray-dark p-1.5 sm:p-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-pastel-mint"
+              aria-label="Siguiente"
             >
-                <ChevronRight size={20} smSize={24} />
+              <ChevronRight size={20} />
             </button>
             <div className="absolute bottom-3 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1.5 sm:space-x-2">
-                {gallerySlides.map((slide, index) => (
+              {gallerySlides.map((slide, index) => (
                 <button
-                    key={slide.id + '-dot'}
-                    onClick={() => setCurrentGallerySlide(index)}
-                    className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-300 ease-in-out focus:outline-none focus:ring-1 focus:ring-white ${
+                  key={slide.id + '-dot'}
+                  onClick={() => setCurrentGallerySlide(index)}
+                  className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-300 ease-in-out focus:outline-none focus:ring-1 focus:ring-white ${
                     index === currentGallerySlide ? 'bg-white scale-125' : 'bg-gray-300/70 hover:bg-gray-200'
-                    }`}
-                    aria-label={`Ir a imagen ${index + 1}`}
-                    aria-current={index === currentGallerySlide}
+                  }`}
+                  aria-label={`Ir a imagen ${index + 1}`}
+                  aria-current={index === currentGallerySlide}
                 />
-                ))}
+              ))}
             </div>
           </div>
         </div>
