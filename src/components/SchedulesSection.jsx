@@ -1,9 +1,6 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Clock, CalendarDays, Sparkles, Palette, Zap, Shield, Users, Sun, Moon, Coffee } from 'lucide-react';
-
-const SCHEDULE_IMAGE_URL_PLACEHOLDER = "https://storage.googleapis.com/hostinger-horizons-assets-prod/a14242c5-6147-4c01-83f7-9f89e1b62041/ed7c966f2dcef6e255a6fb32ab228b94.jpg"; 
+import { Clock, CalendarDays, Sparkles, Zap, Shield, Users, Sun, Moon, Coffee, Wind, HeartPulse, Bone } from 'lucide-react'; // Added Wind, HeartPulse, Bone
 
 const generalSchedule = [
   { day: "Lunes a Viernes", hours: "8:30 - 22:30" },
@@ -13,67 +10,74 @@ const generalSchedule = [
 
 const classScheduleData = {
   Lunes: [
-    { time: "9:30", name: "TRX", icon: Zap, color: "text-pastel-blue-light-dark" },
-    { time: "10:30", name: "Pilates", icon: Users, color: "text-pastel-mint-dark" },
-    { time: "17:30", name: "Ciclo Indoor", icon: Sun, color: "text-pastel-pink-dark" },
-    { time: "18:30", name: "Funcional", icon: Shield, color: "text-yellow-500" },
-    { time: "19:30", name: "Taekwondo", icon: Shield, color: "text-red-500" },
+    { time: "9:15", name: "TRX Entrenamiento funcional", icon: Zap, color: "text-pastel-blue-light-dark" },
+    { time: "10:15", name: "Ciclo Indoor", icon: Sun, color: "text-pastel-pink-dark" },
+    { time: "10:15", name: "Yoga", icon: Users, color: "text-pastel-mint-dark" },
+    { time: "17:30", name: "Taekwondo Infantil", icon: Shield, color: "text-red-500" },
+    { time: "18:45", name: "Taekwondo Alevín", icon: Shield, color: "text-red-600" },
+    { time: "20:00", name: "Taekwondo Adultos", icon: Shield, color: "text-red-700" },
+    { time: "21:00", name: "Jiu Jitsu", icon: Bone, color: "text-purple-600" },
   ],
   Martes: [
-    { time: "9:30", name: "Yoga", icon: Users, color: "text-pastel-mint-dark" },
-    { time: "17:30", name: "Kick Boxing", icon: Shield, color: "text-red-500" },
-    { time: "18:30", name: "Pilates", icon: Users, color: "text-pastel-mint-dark" },
-    { time: "19:30", name: "Ciclo Indoor", icon: Sun, color: "text-pastel-pink-dark" },
+    { time: "16:45", name: "Yoga", icon: Users, color: "text-pastel-mint-dark" },
+    { time: "19:00", name: "TRX Entrenamiento funcional", icon: Zap, color: "text-pastel-blue-light-dark" },
+    { time: "18:45", name: "Ciclo Indoor", icon: Sun, color: "text-pastel-pink-dark" }, // Asumiendo que es 18:45 como en Jueves
+    { time: "20:00", name: "Ciclo Indoor", icon: Sun, color: "text-pastel-pink-dark" },
+    { time: "20:15", name: "Kick Boxing", icon: HeartPulse, color: "text-orange-500" },
+    { time: "21:15", name: "Taekwondo Competición", icon: Shield, color: "text-red-700" },
   ],
   Miércoles: [
-    { time: "9:30", name: "TRX", icon: Zap, color: "text-pastel-blue-light-dark" },
-    { time: "10:30", name: "Pilates", icon: Users, color: "text-pastel-mint-dark" },
-    { time: "17:30", name: "Ciclo Indoor", icon: Sun, color: "text-pastel-pink-dark" },
-    { time: "18:30", name: "Funcional", icon: Shield, color: "text-yellow-500" },
-    { time: "19:30", name: "Taekwondo", icon: Shield, color: "text-red-500" },
+    { time: "9:15", name: "TRX Entrenamiento funcional", icon: Zap, color: "text-pastel-blue-light-dark" },
+    { time: "10:15", name: "Ciclo Indoor", icon: Sun, color: "text-pastel-pink-dark" },
+    { time: "10:15", name: "Yoga", icon: Users, color: "text-pastel-mint-dark" },
+    { time: "17:30", name: "Taekwondo Infantil", icon: Shield, color: "text-red-500" },
+    { time: "18:45", name: "Taekwondo Alevín", icon: Shield, color: "text-red-600" },
+    { time: "20:00", name: "Taekwondo Adultos", icon: Shield, color: "text-red-700" },
+    { time: "21:00", name: "Jiu Jitsu", icon: Bone, color: "text-purple-600" },
   ],
   Jueves: [
-    { time: "9:30", name: "Yoga", icon: Users, color: "text-pastel-mint-dark" },
-    { time: "17:30", name: "Kick Boxing", icon: Shield, color: "text-red-500" },
-    { time: "18:30", name: "Pilates", icon: Users, color: "text-pastel-mint-dark" },
-    { time: "19:30", name: "Ciclo Indoor", icon: Sun, color: "text-pastel-pink-dark" },
+    { time: "16:45", name: "Yoga", icon: Users, color: "text-pastel-mint-dark" },
+    { time: "19:00", name: "TRX Entrenamiento funcional", icon: Zap, color: "text-pastel-blue-light-dark" },
+    { time: "18:45", name: "Ciclo Indoor", icon: Sun, color: "text-pastel-pink-dark" },
+    { time: "20:00", name: "Ciclo Indoor", icon: Sun, color: "text-pastel-pink-dark" },
+    { time: "20:15", name: "Kick Boxing", icon: HeartPulse, color: "text-orange-500" },
+    { time: "21:15", name: "Taekwondo Competición", icon: Shield, color: "text-red-700" },
   ],
   Viernes: [
-    { time: "9:30", name: "TRX", icon: Zap, color: "text-pastel-blue-light-dark" },
-    { time: "17:30", name: "Funcional", icon: Shield, color: "text-yellow-500" },
-    { time: "18:30", name: "Pilates", icon: Users, color: "text-pastel-mint-dark" },
+    { time: "9:15", name: "TRX Entrenamiento funcional", icon: Zap, color: "text-pastel-blue-light-dark" },
+    { time: "10:15", name: "Ciclo Indoor", icon: Sun, color: "text-pastel-pink-dark" },
+    { time: "17:30", name: "Taekwondo Infantil", icon: Shield, color: "text-red-500" },
+    { time: "18:45", name: "Taekwondo Alevín", icon: Shield, color: "text-red-600" },
   ],
   Sábado: [
-     { time: "10:00", name: "Jiu-Jitsu", icon: Shield, color: "text-blue-600" },
-     { time: "11:00", name: "Taekwondo", icon: Shield, color: "text-red-500" },
-     { time: "12:00", name: "Yoga", icon: Users, color: "text-pastel-mint-dark" },
+     { time: "10:30", name: "TRX Entrenamiento funcional", icon: Zap, color: "text-pastel-blue-light-dark" },
   ],
 };
 
 const DayColumn = ({ day, classes }) => (
-  <div className="flex flex-col">
+  <div className="flex flex-col min-w-[160px] sm:min-w-0">
     <div className="text-center py-3 bg-pastel-mint/60 rounded-t-lg">
-      <h4 className="font-semibold text-lg text-pastel-gray-dark">{day}</h4>
+      <h4 className="font-semibold text-base sm:text-lg text-pastel-gray-dark">{day}</h4>
     </div>
-    <div className="flex-grow p-3 bg-white/70 space-y-2 rounded-b-lg">
+    <div className="flex-grow p-2 sm:p-3 bg-white/70 space-y-2 rounded-b-lg min-h-[200px]">
       {classes.length > 0 ? classes.map((cls, idx) => (
         <motion.div 
           key={idx}
           initial={{ opacity: 0, x: -10 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3, delay: idx * 0.05 }}
-          className={`p-2.5 rounded-md shadow-sm hover:shadow-md transition-shadow ${cls.color.replace('text-', 'bg-').replace('-dark','/20').replace('-light','/20')}`}
+          className={`p-2 sm:p-2.5 rounded-md shadow-sm hover:shadow-md transition-shadow ${cls.color.replace('text-', 'bg-').replace('-dark','/20').replace('-light','/20')}`}
         >
           <div className="flex items-center">
-            <cls.icon size={18} className={`mr-2 ${cls.color}`} />
-            <span className={`font-medium text-sm ${cls.color}`}>{cls.time}</span>
+            <cls.icon size={16} smSize={18} className={`mr-1.5 sm:mr-2 ${cls.color}`} />
+            <span className={`font-medium text-xs sm:text-sm ${cls.color}`}>{cls.time}</span>
           </div>
-          <p className="text-xs text-pastel-gray-dark ml-1 mt-0.5">{cls.name}</p>
+          <p className="text-xxs sm:text-xs text-pastel-gray-dark ml-0.5 mt-0.5 leading-tight">{cls.name}</p>
         </motion.div>
       )) : (
-        <div className="text-center py-10">
-          <Coffee size={24} className="mx-auto text-pastel-gray/70" />
-          <p className="text-xs text-pastel-gray/80 mt-1">Descanso</p>
+        <div className="text-center py-10 flex flex-col items-center justify-center h-full">
+          <Coffee size={20} smSize={24} className="mx-auto text-pastel-gray/70" />
+          <p className="text-xxs sm:text-xs text-pastel-gray/80 mt-1">Descanso</p>
         </div>
       )}
     </div>
@@ -140,18 +144,13 @@ const SchedulesSection = () => {
                 <Sparkles className="text-pastel-pink-dark ml-0 sm:ml-2 mt-1 sm:mt-0" size={24} smSize={28} />
             </div>
             
-            <div className="overflow-x-auto pb-4 -mx-4 px-4 md:overflow-visible md:pb-0 md:mx-0 md:px-0">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+            <div className="overflow-x-auto pb-4 -mx-1 px-1 sm:-mx-2 sm:px-2 md:overflow-visible md:pb-0 md:mx-0 md:px-0">
+              <div className="grid grid-flow-col auto-cols-max md:grid-flow-row md:grid-cols-1 lg:grid-cols-6 gap-2 sm:gap-3 md:gap-4">
                 {daysOrder.map(day => (
                   <DayColumn key={day} day={day} classes={classScheduleData[day] || []} />
                 ))}
               </div>
             </div>
-
-             {/* <p className="text-center mt-6 sm:mt-8 text-xs sm:text-sm text-pastel-gray-dark font-medium">
-              Si la imagen del horario no carga, por favor súbela de nuevo o reemplaza la URL en `SchedulesSection.jsx`. <br/>
-              URL actual (placeholder): {SCHEDULE_IMAGE_URL_PLACEHOLDER}
-            </p> */}
 
             <p className="text-center mt-8 sm:mt-10 text-sm sm:text-base text-pastel-gray font-medium">
               Horario sujeto a cambios. Para la info más actualizada, consulta nuestra App <strong className="text-pastel-pink-dark hover:underline cursor-pointer">WodBuster</strong> o pregunta en recepción.

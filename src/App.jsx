@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
 import { Toaster } from '@/components/ui/toaster';
 import Navbar from '@/components/Navbar';
@@ -7,7 +6,7 @@ import PricesSection from '@/components/PricesSection';
 import SchedulesSection from '@/components/SchedulesSection';
 import ActivitiesSection from '@/components/ActivitiesSection';
 import AppSection from '@/components/AppSection';
-import AboutUsSection from '@/components/AboutUsSection';
+import CommunitySection from '@/components/CommunitySection'; // Reemplaza AboutUsSection
 import LocationSection from '@/components/LocationSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -20,11 +19,11 @@ const App = () => {
 
   const scrollToSection = useCallback((sectionId) => {
     const element = document.getElementById(sectionId);
-    const navbar = document.querySelector('nav'); // Select the nav element
+    const navbar = document.querySelector('nav'); 
     
     if (element) {
       let topOffset = 0;
-      if (navbar && sectionId !== 'inicio') { // Only offset if not scrolling to 'inicio' and navbar exists
+      if (navbar && sectionId !== 'inicio') { 
         topOffset = navbar.offsetHeight;
       }
       
@@ -39,11 +38,11 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    const sections = ['inicio', 'tarifas', 'horarios', 'actividades', 'app', 'nosotros', 'ubicacion', 'contacto'];
+    const sections = ['inicio', 'tarifas', 'horarios', 'actividades', 'app', 'comunidad', 'ubicacion', 'contacto']; // 'nosotros' cambiado a 'comunidad'
     const observerOptions = {
       root: null,
       rootMargin: "-40% 0px -60% 0px", 
-      threshold: 0.01, // Use a small threshold to ensure intersection is detected
+      threshold: 0.01, 
     };
 
     const observerCallback = (entries) => {
@@ -87,7 +86,7 @@ const App = () => {
       <SchedulesSection />
       <ActivitiesSection openLightbox={openLightbox} />
       <AppSection scrollToSection={scrollToSection} />
-      <AboutUsSection />
+      <CommunitySection /> {/* Reemplaza AboutUsSection */}
       <LocationSection />
       <ContactSection />
       <Footer scrollToSection={scrollToSection} />

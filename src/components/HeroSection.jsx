@@ -9,7 +9,7 @@ const slidesData = [
     title: "Bienvenido a Gimnasio Bekdoosan",
     subtitle: "Tu mejor versión te está esperando",
     description: "Entrena en el corazón de Segovia con equipos de última generación y un ambiente motivador.",
-    imgSrc: "/imgs/6.png",
+    imgSrc: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80",
     imgAlt: "Gimnasio moderno con equipos de entrenamiento en tonos pastel"
   },
   {
@@ -17,7 +17,7 @@ const slidesData = [
     title: "Entrenamientos Personalizados",
     subtitle: "Alcanza tus objetivos más rápido",
     description: "Nuestros entrenadores profesionales diseñarán un plan a tu medida y te guiarán en cada paso.",
-    imgSrc: "/imgs/11.png",
+    imgSrc: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
     imgAlt: "Entrenador personal ayudando a una clienta en el gimnasio con dedicación"
   },
   {
@@ -25,7 +25,7 @@ const slidesData = [
     title: "Variedad de Actividades",
     subtitle: "Encuentra tu pasión fitness",
     description: "Musculación, cardio, TRX, Jiu Jitsu, Kick Boxing, Yoga, Pilates ¡y mucho más para no aburrirte!",
-    imgSrc: "/imgs/13.png",
+    imgSrc: "https://images.unsplash.com/photo-1540496905036-5937c10647cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
     imgAlt: "Clase grupal de fitness en un ambiente energético y divertido"
   },
   {
@@ -33,7 +33,7 @@ const slidesData = [
     title: "Comunidad y Motivación",
     subtitle: "Entrena en un ambiente positivo",
     description: "Únete a nuestra vibrante comunidad y encuentra la motivación que necesitas para superarte día a día.",
-    imgSrc: "/imgs/7.png",
+    imgSrc: "https://images.unsplash.com/photo-1574680096145-f846b5a6abc4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
     imgAlt: "Grupo de personas entrenando juntas y motivándose en el gimnasio"
   },
   {
@@ -41,7 +41,7 @@ const slidesData = [
     title: "Instalaciones de Primera",
     subtitle: "Equipamiento moderno y espacioso",
     description: "Disfruta de nuestras amplias instalaciones, vestuarios cómodos y maquinaria de última generación.",
-    imgSrc: "/imgs/8.png",
+    imgSrc: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
     imgAlt: "Interior de un gimnasio espacioso, limpio y bien equipado"
   },
   {
@@ -49,7 +49,7 @@ const slidesData = [
     title: "Resultados Garantizados",
     subtitle: "Transforma tu cuerpo y mente",
     description: "Con nuestro apoyo constante y tu dedicación, alcanzarás los resultados que siempre has buscado.",
-    imgSrc: "/imgs/16.png",
+    imgSrc: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80",
     imgAlt: "Persona mostrando su progreso físico y bienestar en el gimnasio"
   },
   {
@@ -57,7 +57,7 @@ const slidesData = [
     title: "Salud y Bienestar Integral",
     subtitle: "Más que fitness, un estilo de vida",
     description: "Fomentamos un enfoque holístico para tu salud, combinando ejercicio, nutrición y mentalidad positiva.",
-    imgSrc: "/imgs/15.png",
+    imgSrc: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
     imgAlt: "Persona practicando yoga en un ambiente sereno y saludable"
   }
 ];

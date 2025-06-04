@@ -4,27 +4,27 @@ import { motion } from 'framer-motion';
 const teamData = [
   {
     id: 'trainer1',
-    imgSrc: "/imgs/1554542899025.jpg",
+    imgSrc: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
     alt: "Entrenador personal sonriente en el gimnasio",
-    name: "Edu Baeza",
-    role: "Experto en biceps",
-    description: "Con más de 15 años de experiencia, Edu te guiará para superar tus límites y alcanzar tus metas de fuerza y condición física."
+    name: "Carlos Martínez",
+    role: "Entrenador Principal",
+    description: "Con más de 15 años de experiencia, Carlos te guiará para superar tus límites y alcanzar tus metas de fuerza y condición física."
   },
   {
     id: 'trainer2',
     imgSrc: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
     alt: "Instructora de yoga y pilates en pose",
-    name: "Rosa",
+    name: "Sofía López",
     role: "Instructora de Bienestar",
     description: "Experta en Yoga, Pilates y TRX. Sofía te ayudará a encontrar el equilibrio entre cuerpo y mente con clases dinámicas y revitalizantes."
   },
   {
     id: 'trainer3',
-    imgSrc: "/imgs/images.jpg",
+    imgSrc: "https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
     alt: "Especialista en artes marciales y nutrición",
-    name: "Eutimio",
+    name: "David Kim",
     role: "Artes Marciales y Nutrición",
-    description: "Cinturón negro en Taekwondo y Jiu Jitsu, Eutimio combina su pasión por las artes marciales con conocimientos en nutrición deportiva."
+    description: "Cinturón negro en Taekwondo y Jiu Jitsu, David combina su pasión por las artes marciales con conocimientos en nutrición deportiva."
   }
 ];
 
@@ -89,17 +89,13 @@ const AboutUsSection = () => {
             viewport={{ once: true }}
             className="relative order-1 lg:order-2"
           >
-          
-
-       
-  <img  
-    className="w-full h-auto object-contain rounded-2xl"
-    src="/imgs/Captura de pantalla 2025-05-30 163902.png"
-    alt="Interior del Gimnasio Bekdoosan con ambiente energético"
-  />
-  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
-   </motion.div>
-</div>
+            <img  
+              className="w-full h-72 sm:h-96 object-cover rounded-2xl shadow-xl"
+              src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Interior del Gimnasio Bekdoosan con ambiente energético" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+          </motion.div>
+        </div>
 
         <div>
           <h3 className="text-2xl sm:text-3xl font-bold text-center text-pastel-gray-dark mb-8 sm:mb-12">Nuestro Equipo</h3>
