@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
@@ -14,7 +15,7 @@ const Navbar = ({ scrollToSection, activeSection }) => {
     { id: 'horarios', label: 'Horarios' },
     { id: 'actividades', label: 'Actividades' },
     { id: 'app', label: 'Nuestra App' },
-    { id: 'comunidad', label: 'Comunidad' }, // 'nosotros' cambiado a 'comunidad'
+    { id: 'comunidad', label: 'Comunidad' },
     { id: 'ubicacion', label: 'Ubicación' },
     { id: 'contacto', label: 'Contacto' },
   ];
@@ -46,10 +47,19 @@ const Navbar = ({ scrollToSection, activeSection }) => {
     );
   
   const handleMobileLinkClick = (sectionId) => {
-    setIsMenuOpen(false); 
-    setTimeout(() => {
-      scrollToSection(sectionId);
-    }, 100); 
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const navHeight = document.querySelector('nav').offsetHeight;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - navHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+
+      setIsMenuOpen(false);
+    }
   };
 
   return (
@@ -61,7 +71,10 @@ const Navbar = ({ scrollToSection, activeSection }) => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             className="flex items-center cursor-pointer"
-            onClick={() => scrollToSection('inicio')}
+            onClick={() => {
+              scrollToSection('inicio');
+              setIsMenuOpen(false);
+            }}
           >
             <img src={LOGO_URL} alt="Gimnasio Bekdoosan Logo" className="h-12 sm:h-16 w-auto mr-2 object-contain" />
             <span className="text-lg sm:text-xl font-bold text-pastel-gray-dark hidden xs:block">
@@ -69,7 +82,7 @@ const Navbar = ({ scrollToSection, activeSection }) => {
             </span>
           </motion.div>
 
-          <div className="hidden md:flex items-center space-x-1 lg:space-x-2"> {/* Reduced space for more items */}
+          <div className="hidden md:flex items-center space-x-1 lg:space-x-2">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -100,7 +113,7 @@ const Navbar = ({ scrollToSection, activeSection }) => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-pastel-beige border-t border-pastel-gray-light shadow-md"
+            className="md:hidden bg-pastel-beige border-t border-pastel-gray-light shadow-md overflow-hidden"
           >
             <div className="px-4 py-3 space-y-1">
               {navItems.map((item) => (

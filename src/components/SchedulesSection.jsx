@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Clock, CalendarDays, Sparkles, Zap, Shield, Users, Sun, Moon, Coffee, Wind, HeartPulse, Bone } from 'lucide-react'; // Added Wind, HeartPulse, Bone
+import { Clock, CalendarDays, Sparkles, Zap, Shield, Users, Sun, Moon, Coffee, Wind, HeartPulse, Bone } from 'lucide-react';
 
 const generalSchedule = [
   { day: "Lunes a Viernes", hours: "8:30 - 22:30" },
@@ -21,7 +22,7 @@ const classScheduleData = {
   Martes: [
     { time: "16:45", name: "Yoga", icon: Users, color: "text-pastel-mint-dark" },
     { time: "19:00", name: "TRX Entrenamiento funcional", icon: Zap, color: "text-pastel-blue-light-dark" },
-    { time: "18:45", name: "Ciclo Indoor", icon: Sun, color: "text-pastel-pink-dark" }, // Asumiendo que es 18:45 como en Jueves
+    { time: "18:45", name: "Ciclo Indoor", icon: Sun, color: "text-pastel-pink-dark" },
     { time: "20:00", name: "Ciclo Indoor", icon: Sun, color: "text-pastel-pink-dark" },
     { time: "20:15", name: "Kick Boxing", icon: HeartPulse, color: "text-orange-500" },
     { time: "21:15", name: "Taekwondo Competición", icon: Shield, color: "text-red-700" },
@@ -55,7 +56,7 @@ const classScheduleData = {
 };
 
 const DayColumn = ({ day, classes }) => (
-  <div className="flex flex-col min-w-[160px] sm:min-w-0">
+  <div className="flex flex-col min-w-[280px] sm:min-w-[200px] md:min-w-0">
     <div className="text-center py-3 bg-pastel-mint/60 rounded-t-lg">
       <h4 className="font-semibold text-base sm:text-lg text-pastel-gray-dark">{day}</h4>
     </div>
@@ -69,21 +70,20 @@ const DayColumn = ({ day, classes }) => (
           className={`p-2 sm:p-2.5 rounded-md shadow-sm hover:shadow-md transition-shadow ${cls.color.replace('text-', 'bg-').replace('-dark','/20').replace('-light','/20')}`}
         >
           <div className="flex items-center">
-            <cls.icon size={16} smSize={18} className={`mr-1.5 sm:mr-2 ${cls.color}`} />
-            <span className={`font-medium text-xs sm:text-sm ${cls.color}`}>{cls.time}</span>
+            <cls.icon size={16} className={`mr-1.5 sm:mr-2 ${cls.color}`} />
+            <span className={`font-medium text-sm ${cls.color}`}>{cls.time}</span>
           </div>
-          <p className="text-xxs sm:text-xs text-pastel-gray-dark ml-0.5 mt-0.5 leading-tight">{cls.name}</p>
+          <p className="text-sm text-pastel-gray-dark ml-0.5 mt-0.5 leading-tight">{cls.name}</p>
         </motion.div>
       )) : (
         <div className="text-center py-10 flex flex-col items-center justify-center h-full">
-          <Coffee size={20} smSize={24} className="mx-auto text-pastel-gray/70" />
-          <p className="text-xxs sm:text-xs text-pastel-gray/80 mt-1">Descanso</p>
+          <Coffee size={20} className="mx-auto text-pastel-gray/70" />
+          <p className="text-sm text-pastel-gray/80 mt-1">Descanso</p>
         </div>
       )}
     </div>
   </div>
 );
-
 
 const SchedulesSection = () => {
   const daysOrder = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
@@ -107,25 +107,27 @@ const SchedulesSection = () => {
         </motion.div>
 
         <div className="mb-12 sm:mb-16 bg-white rounded-2xl shadow-xl p-6 sm:p-8">
-            <div className="flex items-center justify-center mb-4 sm:mb-6">
-                 <Clock className="text-pastel-pink mr-2 sm:mr-3" size={28} smSize={32} />
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-pastel-gray-dark text-center">Horario General del Gimnasio</h3>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
-                {generalSchedule.map((item, index) => (
-                    <motion.div 
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                        viewport={{ once: true }}
-                        className="bg-pastel-lila-light/50 p-3 sm:p-4 rounded-lg hover-lift"
-                    >
-                        <p className="font-semibold text-md sm:text-lg text-pastel-gray-dark">{item.day}</p>
-                        <p className="text-pastel-mint-dark text-lg sm:text-xl font-bold">{item.hours}</p>
-                    </motion.div>
-                ))}
-            </div>
+          <div className="flex items-center justify-center mb-4 sm:mb-6">
+            <Clock className="text-pastel-pink mr-2 sm:mr-3" size={28} />
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-pastel-gray-dark text-center">
+              Horario General del Gimnasio
+            </h3>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
+            {generalSchedule.map((item, index) => (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-pastel-lila-light/50 p-3 sm:p-4 rounded-lg hover-lift"
+              >
+                <p className="font-semibold text-md sm:text-lg text-pastel-gray-dark">{item.day}</p>
+                <p className="text-pastel-mint-dark text-lg sm:text-xl font-bold">{item.hours}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
         
         <motion.div 
@@ -137,15 +139,15 @@ const SchedulesSection = () => {
         >
           <div className="bg-white/80 backdrop-blur-md rounded-2xl p-4 sm:p-6 md:p-8 shadow-inner">
             <div className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left mb-6 sm:mb-8">
-                <CalendarDays className="text-pastel-pink-dark mr-0 sm:mr-3 mb-2 sm:mb-0" size={32} smSize={36} />
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-pastel-gray-dark">
+              <CalendarDays className="text-pastel-pink-dark mr-0 sm:mr-3 mb-2 sm:mb-0" size={32} />
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-pastel-gray-dark">
                 Clases Dirigidas Semanales
-                </h3>
-                <Sparkles className="text-pastel-pink-dark ml-0 sm:ml-2 mt-1 sm:mt-0" size={24} smSize={28} />
+              </h3>
+              <Sparkles className="text-pastel-pink-dark ml-0 sm:ml-2 mt-1 sm:mt-0" size={24} />
             </div>
             
-            <div className="overflow-x-auto pb-4 -mx-1 px-1 sm:-mx-2 sm:px-2 md:overflow-visible md:pb-0 md:mx-0 md:px-0">
-              <div className="grid grid-flow-col auto-cols-max md:grid-flow-row md:grid-cols-1 lg:grid-cols-6 gap-2 sm:gap-3 md:gap-4">
+            <div className="overflow-x-auto pb-4 -mx-4 px-4 md:overflow-visible md:pb-0 md:mx-0 md:px-0">
+              <div className="inline-flex md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
                 {daysOrder.map(day => (
                   <DayColumn key={day} day={day} classes={classScheduleData[day] || []} />
                 ))}
