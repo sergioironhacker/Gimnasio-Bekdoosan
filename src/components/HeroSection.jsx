@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useMotionValue } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -117,7 +116,6 @@ const HeroSection = ({ scrollToSection, openLightbox }) => {
     startAutoplay();
   };
 
-
   return (
     <section id="inicio" className="relative h-screen min-h-[600px] sm:min-h-[700px] overflow-hidden pt-16 sm:pt-20 bg-pastel-beige">
       <motion.div
@@ -142,13 +140,14 @@ const HeroSection = ({ scrollToSection, openLightbox }) => {
               >
                 <div className="relative h-full flex items-center justify-center">
                   <img
-                    className="absolute inset-0 w-full h-full object-cover opacity-60"
+                    className="absolute inset-0 w-full h-full object-cover brightness-90"
                     src={slide.imgSrc}
                     alt={slide.imgAlt}
                     onClick={(e) => { e.stopPropagation(); openLightbox(slide.imgSrc); }}
                     draggable="false" 
-                    />
-                  <div className="absolute inset-0 bg-gradient-to-t from-pastel-beige via-pastel-beige/60 to-transparent"></div>
+                  />
+                  {/* Degradado más suave y menos opaco */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-pastel-beige/40 via-pastel-beige/20 to-transparent"></div>
                   <div className="relative z-10 text-center text-pastel-gray-dark px-4 sm:px-6 lg:px-8">
                     <motion.h1
                       className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6"
@@ -214,7 +213,7 @@ const HeroSection = ({ scrollToSection, openLightbox }) => {
         {slidesData.map((slide, index) => (
           <button
             key={slide.id}
-            onClick={(e) => { e.stopPropagation(); handleDotClick(index);}}
+            onClick={(e) => { e.stopPropagation(); handleDotClick(index);} }
             className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ease-in-out focus:outline-none focus:ring-1 focus:ring-pastel-mint ${
               index === currentSlide ? 'bg-pastel-mint scale-125' : 'bg-pastel-gray-light hover:bg-pastel-gray'
             }`}

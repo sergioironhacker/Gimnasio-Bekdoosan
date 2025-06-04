@@ -250,23 +250,36 @@ const ActivitiesSection = ({ openLightbox }) => {
               ))}
             </AnimatePresence>
             </motion.div>
-            <button
+           {/*  <button
                 onClick={(e) => { e.stopPropagation(); prevGallerySlide(); }}
                 className="absolute left-2 sm:left-3 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white text-pastel-gray-dark p-1.5 sm:p-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-pastel-mint z-20"
                 aria-label="Anterior"
                 style={{ marginTop: '-1.5rem' }} 
             >
                 <ChevronLeft size={20} />
-            </button>
-            <button
+            </button> */}
+           {/*  <button
                 onClick={(e) => { e.stopPropagation(); nextGallerySlide(); }}
                 className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white text-pastel-gray-dark p-1.5 sm:p-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-pastel-mint z-20"
                 aria-label="Siguiente"
                 style={{ marginTop: '-1.5rem' }}
             >
                 <ChevronRight size={20} />
-            </button>
-            <div className="absolute bottom-3 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1.5 sm:space-x-2 z-20" style={{ marginTop: 'calc( ( (72px * 4) + (80px * 4) + (96px * 4) ) / 12 - 1rem)'}}> {/* Adjust margin for dots to be below slider */}
+            </button> */}
+           
+          
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ActivitiesSection;
+
+
+
+
+/*  <div className="absolute bottom-3 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1.5 sm:space-x-2 z-20" style={{ marginTop: 'calc( ( (72px * 4) + (80px * 4) + (96px * 4) ) / 12 - 1rem)'}}> {/* Adjust margin for dots to be below slider }
                 {gallerySlides.map((slide, index) => (
                 <button
                     key={slide.id + '-dot'}
@@ -278,12 +291,4 @@ const ActivitiesSection = ({ openLightbox }) => {
                     aria-current={index === currentGallerySlide}
                 />
                 ))}
-            </div>
-          
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default ActivitiesSection;
+            </div>  */
