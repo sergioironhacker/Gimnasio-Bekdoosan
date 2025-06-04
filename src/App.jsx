@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useCallback } from 'react';
 import { Toaster } from '@/components/ui/toaster';
 import Navbar from '@/components/Navbar';
@@ -6,7 +7,7 @@ import PricesSection from '@/components/PricesSection';
 import SchedulesSection from '@/components/SchedulesSection';
 import ActivitiesSection from '@/components/ActivitiesSection';
 import AppSection from '@/components/AppSection';
-import CommunitySection from '@/components/CommunitySection'; // Reemplaza AboutUsSection
+import CommunitySection from '@/components/CommunitySection';
 import LocationSection from '@/components/LocationSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -34,11 +35,15 @@ const App = () => {
         top: offsetPosition,
         behavior: 'smooth',
       });
+      // Actualizar activeSection inmediatamente al hacer clic para mejorar la respuesta visual del menú
+      // Esto es opcional y puede tener efectos secundarios si el scroll es interrumpido.
+      // Considerar si es mejor depender solo del IntersectionObserver.
+      // setActiveSection(sectionId); 
     }
   }, []);
 
   useEffect(() => {
-    const sections = ['inicio', 'tarifas', 'horarios', 'actividades', 'app', 'comunidad', 'ubicacion', 'contacto']; // 'nosotros' cambiado a 'comunidad'
+    const sections = ['inicio', 'tarifas', 'horarios', 'actividades', 'app', 'comunidad', 'ubicacion', 'contacto'];
     const observerOptions = {
       root: null,
       rootMargin: "-40% 0px -60% 0px", 
@@ -86,7 +91,7 @@ const App = () => {
       <SchedulesSection />
       <ActivitiesSection openLightbox={openLightbox} />
       <AppSection scrollToSection={scrollToSection} />
-      <CommunitySection /> {/* Reemplaza AboutUsSection */}
+      <CommunitySection />
       <LocationSection />
       <ContactSection />
       <Footer scrollToSection={scrollToSection} />

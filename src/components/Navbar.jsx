@@ -47,19 +47,11 @@ const Navbar = ({ scrollToSection, activeSection }) => {
     );
   
   const handleMobileLinkClick = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const navHeight = document.querySelector('nav').offsetHeight;
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      const offsetPosition = elementPosition - navHeight;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-
-      setIsMenuOpen(false);
-    }
+    setIsMenuOpen(false); // Close menu first
+    // Timeout to allow menu to close before scrolling, prevents visual glitches
+    setTimeout(() => {
+      scrollToSection(sectionId);
+    }, 100); 
   };
 
   return (
@@ -72,8 +64,12 @@ const Navbar = ({ scrollToSection, activeSection }) => {
             transition={{ duration: 0.5 }}
             className="flex items-center cursor-pointer"
             onClick={() => {
-              scrollToSection('inicio');
-              setIsMenuOpen(false);
+              // For logo click, ensure menu closes if open, then scroll
+              if (isMenuOpen) {
+                handleMobileLinkClick('inicio');
+              } else {
+                scrollToSection('inicio');
+              }
             }}
           >
             <img src={LOGO_URL} alt="Gimnasio Bekdoosan Logo" className="h-12 sm:h-16 w-auto mr-2 object-contain" />
@@ -97,7 +93,7 @@ const Navbar = ({ scrollToSection, activeSection }) => {
           </div>
 
           <button
-            className="md:hidden text-pastel-gray-dark p-2 -mr-2"
+            className="md:hidden text-pastel-gray-dark p-2 -mr-2 z-10" // Ensure button is clickable
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={isMenuOpen}

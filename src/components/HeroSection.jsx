@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence, useMotionValue } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -62,27 +63,71 @@ const slidesData = [
   }
 ];
 
+const DRAG_BUFFER = 50;
+
 const HeroSection = ({ scrollToSection, openLightbox }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const dragX = useMotionValue(0);
+  const intervalRef = useRef(null);
+
+  const startAutoplay = () => {
+    stopAutoplay();
+    intervalRef.current = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slidesData.length);
+    }, 6000);
+  };
+
+  const stopAutoplay = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+  };
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slidesData.length);
-    }, 6000); 
-    return () => clearInterval(timer);
+    startAutoplay();
+    return () => stopAutoplay();
   }, []);
 
   const nextSlide = () => {
+    stopAutoplay();
     setCurrentSlide((prev) => (prev + 1) % slidesData.length);
+    startAutoplay();
   };
 
   const prevSlide = () => {
+    stopAutoplay();
     setCurrentSlide((prev) => (prev - 1 + slidesData.length) % slidesData.length);
+    startAutoplay();
   };
+
+  const onDragEnd = () => {
+    stopAutoplay();
+    const x = dragX.get();
+    if (x < -DRAG_BUFFER) {
+      setCurrentSlide((prev) => (prev + 1) % slidesData.length);
+    } else if (x > DRAG_BUFFER) {
+      setCurrentSlide((prev) => (prev - 1 + slidesData.length) % slidesData.length);
+    }
+    startAutoplay();
+  };
+  
+  const handleDotClick = (index) => {
+    stopAutoplay();
+    setCurrentSlide(index);
+    startAutoplay();
+  };
+
 
   return (
     <section id="inicio" className="relative h-screen min-h-[600px] sm:min-h-[700px] overflow-hidden pt-16 sm:pt-20 bg-pastel-beige">
-      <div className="slider-container h-full">
+      <motion.div
+        className="slider-container h-full relative cursor-grab"
+        drag="x"
+        dragConstraints={{ left: 0, right: 0 }}
+        style={{ x: dragX }}
+        onDragStart={stopAutoplay}
+        onDragEnd={onDragEnd}
+      >
         <AnimatePresence initial={false} custom={currentSlide}>
           {slidesData.map((slide, index) => (
             index === currentSlide && (
@@ -93,15 +138,17 @@ const HeroSection = ({ scrollToSection, openLightbox }) => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -300 }}
                 transition={{ duration: 0.7, ease: "easeInOut" }}
+                custom={currentSlide}
               >
                 <div className="relative h-full flex items-center justify-center">
                   <img
-                    className="absolute inset-0 w-full h-full object-cover opacity-40 cursor-pointer hover:opacity-50 transition-opacity duration-300"
+                    className="absolute inset-0 w-full h-full object-cover opacity-60"
                     src={slide.imgSrc}
                     alt={slide.imgAlt}
-                    onClick={() => openLightbox(slide.imgSrc)}
+                    onClick={(e) => { e.stopPropagation(); openLightbox(slide.imgSrc); }}
+                    draggable="false" 
                     />
-                  <div className="absolute inset-0 bg-gradient-to-t from-pastel-beige via-pastel-beige/70 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-pastel-beige via-pastel-beige/60 to-transparent"></div>
                   <div className="relative z-10 text-center text-pastel-gray-dark px-4 sm:px-6 lg:px-8">
                     <motion.h1
                       className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6"
@@ -135,7 +182,7 @@ const HeroSection = ({ scrollToSection, openLightbox }) => {
                       <Button
                         size="lg"
                         className="bg-pastel-mint hover:bg-pastel-mint-dark text-pastel-gray-dark px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                        onClick={() => scrollToSection('contacto')}
+                        onClick={(e) => { e.stopPropagation(); scrollToSection('contacto'); }}
                       >
                         ¡Únete Ahora!
                       </Button>
@@ -146,28 +193,28 @@ const HeroSection = ({ scrollToSection, openLightbox }) => {
             )
           ))}
         </AnimatePresence>
-      </div>
+      </motion.div>
 
       <button
-        onClick={prevSlide}
-        className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-pastel-lila-light/60 hover:bg-pastel-lila-light text-pastel-gray-dark p-2 sm:p-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-pastel-mint"
+        onClick={(e) => { e.stopPropagation(); prevSlide(); }}
+        className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-pastel-lila-light/60 hover:bg-pastel-lila-light text-pastel-gray-dark p-2 sm:p-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-pastel-mint z-20"
         aria-label="Diapositiva anterior"
       >
         <ChevronLeft size={24} />
       </button>
       <button
-        onClick={nextSlide}
-        className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-pastel-lila-light/60 hover:bg-pastel-lila-light text-pastel-gray-dark p-2 sm:p-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-pastel-mint"
+        onClick={(e) => { e.stopPropagation(); nextSlide(); }}
+        className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-pastel-lila-light/60 hover:bg-pastel-lila-light text-pastel-gray-dark p-2 sm:p-3 rounded-full transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-pastel-mint z-20"
         aria-label="Siguiente diapositiva"
       >
         <ChevronRight size={24} />
       </button>
 
-      <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
         {slidesData.map((slide, index) => (
           <button
             key={slide.id}
-            onClick={() => setCurrentSlide(index)}
+            onClick={(e) => { e.stopPropagation(); handleDotClick(index);}}
             className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ease-in-out focus:outline-none focus:ring-1 focus:ring-pastel-mint ${
               index === currentSlide ? 'bg-pastel-mint scale-125' : 'bg-pastel-gray-light hover:bg-pastel-gray'
             }`}

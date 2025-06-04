@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Dumbbell, Heart, Users, Shield, ChevronLeft, ChevronRight, Zap, Wind, Bone, Sparkles as ActivitySparkles } from 'lucide-react'; // Renamed Sparkles to ActivitySparkles
+
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence, useMotionValue } from 'framer-motion';
+import { Dumbbell, Heart, Users, Shield, ChevronLeft, ChevronRight, Zap, Wind, Bone, Sparkles as ActivitySparkles } from 'lucide-react';
 
 const activitiesData = [
   {
@@ -41,21 +42,21 @@ const activitiesData = [
   {
     name: "Yoga y Bienestar",
     description: "Conecta cuerpo y mente, mejora flexibilidad y encuentra tu paz interior con nuestras clases.",
-    icon: Wind, // Using Wind for Yoga/Bienestar
+    icon: Wind, 
     color: "text-green-500",
     bgColor: "bg-green-500/10"
   },
   {
     name: "Ciclo Indoor",
     description: "Pedalea al ritmo de la música, quema calorías y desafía tu resistencia en nuestras clases.",
-    icon: ActivitySparkles, // Using Sparkles for Ciclo
+    icon: ActivitySparkles, 
     color: "text-pastel-pink-dark",
     bgColor: "bg-pastel-pink/20"
   },
   {
     name: "Jiu Jitsu & Defensa",
     description: "Domina técnicas de defensa personal y sumérgete en el arte suave del Jiu Jitsu.",
-    icon: Bone, // Using Bone for Jiu Jitsu
+    icon: Bone, 
     color: "text-indigo-600",
     bgColor: "bg-indigo-600/10"
   }
@@ -120,24 +121,59 @@ const gallerySlides = [
   }
 ];
 
+const DRAG_BUFFER_GALLERY = 40;
+
 const ActivitiesSection = ({ openLightbox }) => {
   const [currentGallerySlide, setCurrentGallerySlide] = useState(0);
+  const galleryDragX = useMotionValue(0);
+  const galleryIntervalRef = useRef(null);
 
-  const nextGallerySlide = () => {
-    setCurrentGallerySlide((prev) => (prev + 1) % gallerySlides.length);
+  const startGalleryAutoplay = () => {
+    stopGalleryAutoplay();
+    galleryIntervalRef.current = setInterval(() => {
+      setCurrentGallerySlide((prev) => (prev + 1) % gallerySlides.length);
+    }, 4500);
   };
 
-  const prevGallerySlide = () => {
-    setCurrentGallerySlide((prev) => (prev - 1 + gallerySlides.length) % gallerySlides.length);
+  const stopGalleryAutoplay = () => {
+    if (galleryIntervalRef.current) {
+      clearInterval(galleryIntervalRef.current);
+    }
   };
   
   useEffect(() => {
-    const timer = setInterval(() => {
-      nextGallerySlide();
-    }, 4500); 
-    return () => clearInterval(timer);
+    startGalleryAutoplay();
+    return () => stopGalleryAutoplay();
   }, []);
 
+  const nextGallerySlide = () => {
+    stopGalleryAutoplay();
+    setCurrentGallerySlide((prev) => (prev + 1) % gallerySlides.length);
+    startGalleryAutoplay();
+  };
+
+  const prevGallerySlide = () => {
+    stopGalleryAutoplay();
+    setCurrentGallerySlide((prev) => (prev - 1 + gallerySlides.length) % gallerySlides.length);
+    startGalleryAutoplay();
+  };
+
+  const onGalleryDragEnd = () => {
+    stopGalleryAutoplay();
+    const x = galleryDragX.get();
+    if (x < -DRAG_BUFFER_GALLERY) {
+      setCurrentGallerySlide((prev) => (prev + 1) % gallerySlides.length);
+    } else if (x > DRAG_BUFFER_GALLERY) {
+      setCurrentGallerySlide((prev) => (prev - 1 + gallerySlides.length) % gallerySlides.length);
+    }
+    startGalleryAutoplay();
+  };
+
+  const handleGalleryDotClick = (index) => {
+    stopGalleryAutoplay();
+    setCurrentGallerySlide(index);
+    startGalleryAutoplay();
+  };
 
   return (
     <section id="actividades" className="section-padding bg-pastel-lila-light/30">
@@ -178,23 +214,33 @@ const ActivitiesSection = ({ openLightbox }) => {
 
         <div className="mt-16 sm:mt-20">
           <h3 className="text-2xl sm:text-3xl font-bold text-center text-pastel-gray-dark mb-8 sm:mb-12">Galería de Momentos Bekdoosan</h3>
-          <div className="relative slider-container h-72 sm:h-80 md:h-96 rounded-2xl shadow-xl overflow-hidden">
+          <motion.div 
+            className="relative slider-container h-72 sm:h-80 md:h-96 rounded-2xl shadow-xl overflow-hidden cursor-grab"
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            style={{ x: galleryDragX }}
+            onDragStart={stopGalleryAutoplay}
+            onDragEnd={onGalleryDragEnd}
+          >
             <AnimatePresence initial={false} custom={currentGallerySlide}>
               {gallerySlides.map((slide, index) => (
                 index === currentGallerySlide && (
                   <motion.div
                     key={slide.id}
-                    className="slider-slide h-full absolute inset-0 cursor-pointer group"
+                    className="slider-slide h-full absolute inset-0 group"
                     initial={{ opacity: 0, x: 200 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -200 }}
                     transition={{ duration: 0.5, ease: "circOut" }}
-                    onClick={() => openLightbox(slide.src)}
+                    custom={currentGallerySlide}
+                    onClick={(e) => { e.stopPropagation(); openLightbox(slide.src); }}
                   >
                     <img
                       className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
                       src={slide.src}
-                      alt={slide.alt} />
+                      alt={slide.alt} 
+                      draggable="false"
+                      />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex flex-col justify-end p-4 sm:p-6">
                       <h4 className="text-lg sm:text-xl font-bold text-white drop-shadow-md">{slide.title}</h4>
                       <p className="text-xs sm:text-sm text-gray-200 drop-shadow-sm">{slide.subtitle}</p>
@@ -203,25 +249,28 @@ const ActivitiesSection = ({ openLightbox }) => {
                 )
               ))}
             </AnimatePresence>
+            </motion.div>
             <button
-                onClick={prevGallerySlide}
-                className="absolute left-2 sm:left-3 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white text-pastel-gray-dark p-1.5 sm:p-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-pastel-mint"
+                onClick={(e) => { e.stopPropagation(); prevGallerySlide(); }}
+                className="absolute left-2 sm:left-3 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white text-pastel-gray-dark p-1.5 sm:p-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-pastel-mint z-20"
                 aria-label="Anterior"
+                style={{ marginTop: '-1.5rem' }} 
             >
-                <ChevronLeft size={20} smSize={24} />
+                <ChevronLeft size={20} />
             </button>
             <button
-                onClick={nextGallerySlide}
-                className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white text-pastel-gray-dark p-1.5 sm:p-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-pastel-mint"
+                onClick={(e) => { e.stopPropagation(); nextGallerySlide(); }}
+                className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 bg-white/60 hover:bg-white text-pastel-gray-dark p-1.5 sm:p-2 rounded-full transition-all duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-pastel-mint z-20"
                 aria-label="Siguiente"
+                style={{ marginTop: '-1.5rem' }}
             >
-                <ChevronRight size={20} smSize={24} />
+                <ChevronRight size={20} />
             </button>
-            <div className="absolute bottom-3 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1.5 sm:space-x-2">
+            <div className="absolute bottom-3 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-1.5 sm:space-x-2 z-20" style={{ marginTop: 'calc( ( (72px * 4) + (80px * 4) + (96px * 4) ) / 12 - 1rem)'}}> {/* Adjust margin for dots to be below slider */}
                 {gallerySlides.map((slide, index) => (
                 <button
                     key={slide.id + '-dot'}
-                    onClick={() => setCurrentGallerySlide(index)}
+                    onClick={(e) => { e.stopPropagation(); handleGalleryDotClick(index);}}
                     className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-300 ease-in-out focus:outline-none focus:ring-1 focus:ring-white ${
                     index === currentGallerySlide ? 'bg-white scale-125' : 'bg-gray-300/70 hover:bg-gray-200'
                     }`}
@@ -230,7 +279,7 @@ const ActivitiesSection = ({ openLightbox }) => {
                 />
                 ))}
             </div>
-          </div>
+          
         </div>
       </div>
     </section>
