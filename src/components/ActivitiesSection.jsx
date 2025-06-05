@@ -64,7 +64,7 @@ const activitiesData = [
 const gallerySlides = [
   {
     id: 'gallery1',
-    src: "https://images.unsplash.com/photo-1595235384607-1b28167f8d2f?auto=format&fit=crop&w=1000&q=80",
+    src: "/imgs/img-gallery-1.jpg",
     alt: "Área de musculación con pesas y máquinas",
     title: "Zona de Musculación Avanzada",
     subtitle: "Equipos de última generación para tus rutinas de fuerza."

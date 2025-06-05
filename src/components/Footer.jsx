@@ -112,9 +112,9 @@ const Footer = ({ scrollToSection }) => {
           <div className="flex flex-col sm:flex-row justify-center items-center text-pastel-gray-light text-xs space-y-2 sm:space-y-0 sm:space-x-3 mb-3">
             <div className="flex items-center"><MapPin size={12} className="mr-1.5"/> C/ Antonio Coronel 18, 40003 Segovia</div>
             <div className="hidden sm:block">|</div>
-            <div className="flex items-center"><Phone size={12} className="mr-1.5"/> +34 921 430 151</div>
+            <div className="flex items-center"><Phone size={12} className="mr-1.5"/> 921 43 01 51</div>
             <div className="hidden sm:block">|</div>
-            <div className="flex items-center"><Mail size={12} className="mr-1.5"/> info@gimnasiobekdoosan.com</div>
+            <div className="flex items-center"><Mail size={12} className="mr-1.5"/> bekdoosan@beldoosan.com</div>
           </div>
           <p className="text-pastel-gray-light text-xs">&copy; {new Date().getFullYear()} Gimnasio Bekdoosan. Todos los derechos reservados.</p>
           <p className="mt-1.5 text-xxs text-pastel-gray/70">

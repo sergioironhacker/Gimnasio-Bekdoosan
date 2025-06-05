@@ -4,10 +4,8 @@ import { MapPin, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const LocationSection = () => {
-  const address = "C/ Antonio Coronel 18, 40003 Segovia, España";
-  const googleMapsQuery = `https://maps.google.com/?q=${encodeURIComponent(address)}`;
-  const openStreetMapEmbed = `https://www.openstreetmap.org/export/embed.html?bbox=-4.11916,40.94725,-4.11664,40.94890&layer=mapnik&marker=40.948077,-4.117900`;
-
+  const address = "Calle Santa Catalina 13-15, 40003 Segovia, España";
+  const googleMapsQuery = `https://www.google.com/maps/place/Bekdoosan+Gymnasio/@40.9519871,-4.1128977,17z`;
 
   return (
     <section id="ubicacion" className="section-padding bg-pastel-lila-light/30">
@@ -37,7 +35,7 @@ const LocationSection = () => {
           >
             <div className="bg-gradient-to-br from-pastel-blue-light to-pastel-beige rounded-2xl p-6 sm:p-8 shadow-lg flex-grow flex flex-col">
               <div className="flex items-center mb-4 sm:mb-6">
-                <MapPin className="text-pastel-pink mr-3 sm:mr-4 flex-shrink-0" size={28} smSize={32} />
+                <MapPin className="text-pastel-pink mr-3 sm:mr-4 flex-shrink-0" size={28} />
                 <div>
                   <h3 className="text-xl sm:text-2xl font-bold text-pastel-gray-dark">Dirección</h3>
                   <p className="text-pastel-gray text-sm sm:text-base">Fácil acceso y ubicación privilegiada</p>
@@ -46,7 +44,7 @@ const LocationSection = () => {
 
               <address className="not-italic space-y-3 sm:space-y-4 text-sm sm:text-base mb-6 sm:mb-8">
                 <p className="font-semibold text-pastel-gray-dark">{address}</p>
-                <p className="text-pastel-gray">A solo 500 metros del Acueducto.</p>
+                <p className="text-pastel-gray">A solo unos minutos del Acueducto.</p>
                 <p className="text-pastel-gray">Excelente conexión con transporte público.</p>
                 <p className="text-pastel-gray">Parking disponible en zonas cercanas.</p>
               </address>
@@ -71,7 +69,7 @@ const LocationSection = () => {
             className="relative h-80 sm:h-96 lg:h-full min-h-[300px]"
           >
             <iframe
-              src={openStreetMapEmbed}
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.5872338990277!2d-4.115083524161343!3d40.95198707137345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd413ed8d8e83501%3A0x474a2a7cb6f71ede!2sBekdoosan%20Gymnasio!5e0!3m2!1ses!2ses!4v1717610802401!5m2!1ses!2ses"
               width="100%"
               height="100%"
               className="rounded-2xl shadow-lg border-2 border-pastel-gray-light"
@@ -79,7 +77,7 @@ const LocationSection = () => {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Ubicación Gimnasio Bekdoosan en OpenStreetMap"
+              title="Ubicación Gimnasio Bekdoosan en Google Maps"
             ></iframe>
           </motion.div>
         </div>
