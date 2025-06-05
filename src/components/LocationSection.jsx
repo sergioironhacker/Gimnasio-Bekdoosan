@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 
 const LocationSection = () => {
   const address = "Calle Santa Catalina 13-15, 40003 Segovia, España";
-  const googleMapsQuery = `https://www.google.com/maps/place/Bekdoosan+Gymnasio/@40.9519871,-4.1128977,17z`;
+  const googleMapsQuery = `https://www.google.com/maps/place/Bekdoosan+Gymnasio/@40.9519911,-4.1154726,17z/data=!3m1!4b1!4m6!3m5!1s0xd413ed8d8e83501:0x474a2a7cb6f71ede!8m2!3d40.9519871!4d-4.1128977!16s%2Fg%2F11fzf344ns?entry=ttu&g_ep=EgoyMDI1MDYwMy4wIKXMDSoASAFQAw%3D%3D`;
 
   return (
     <section id="ubicacion" className="section-padding bg-pastel-lila-light/30">

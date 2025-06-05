@@ -47,7 +47,7 @@ const testimonials = [
   {
     id: 'testimonial3',
     quote: "Nunca pensé que disfrutaría tanto ir al gimnasio. Bekdoosan cambió mi perspectiva. ¡Gracias!",
-    name: "Ana P.",
+    name: "David M.",
     role: "Amante del Bienestar",
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NVx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=100&q=60"
   }
