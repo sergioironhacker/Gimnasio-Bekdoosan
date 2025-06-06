@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
-const LOGO_URL = "/imgs/logo-main.png";
+const LOGO_URL = "/imgs/logo-bekdoosan-redondo.png";
 
 const Navbar = ({ scrollToSection, activeSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

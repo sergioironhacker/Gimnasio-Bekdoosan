@@ -13,7 +13,7 @@ const FloatingWhatsAppButton = () => {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       aria-label="Contactar por WhatsApp"
-      style={{ width: '50px', height: '50px' }} 
+      style={{ width: '56px', height: '56px' }} 
     >
       <img src={WHATSAPP_LOGO_URL} alt="WhatsApp Logo" className="w-7 h-7" />
     </motion.a>

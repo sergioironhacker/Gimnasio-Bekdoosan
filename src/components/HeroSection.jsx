@@ -17,7 +17,7 @@ const slidesData = [
     title: "Entrenamientos Personalizados",
     subtitle: "Alcanza tus objetivos más rápido",
     description: "Nuestros entrenadores profesionales diseñarán un plan a tu medida y te guiarán en cada paso.",
-    imgSrc: "/imgs/img-22222main2.jpg",
+    imgSrc: "/imgs/slide-2-navbar.jpg",
     imgAlt: "Entrenador personal ayudando a una clienta en el gimnasio con dedicación"
   },
   {
@@ -25,7 +25,7 @@ const slidesData = [
     title: "Variedad de Actividades",
     subtitle: "Encuentra tu pasión fitness",
     description: "Musculación, cardio, TRX, Jiu Jitsu, Kick Boxing, Yoga, Pilates ¡y mucho más para no aburrirte!",
-    imgSrc: "https://images.unsplash.com/photo-1540496905036-5937c10647cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80",
+    imgSrc: "/imgs/stronger.jpg",
     imgAlt: "Clase grupal de fitness en un ambiente energético y divertido"
   },
   {
@@ -33,7 +33,7 @@ const slidesData = [
     title: "Comunidad y Motivación",
     subtitle: "Entrena en un ambiente positivo",
     description: "Únete a nuestra vibrante comunidad y encuentra la motivación que necesitas para superarte día a día.",
-    imgSrc: "https://images.unsplash.com/photo-1574680096145-f846b5a6abc4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80",
+    imgSrc: "/imgs/yona.jpg",
     imgAlt: "Grupo de personas entrenando juntas y motivándose en el gimnasio"
   },
   {
@@ -41,7 +41,7 @@ const slidesData = [
     title: "Instalaciones de Primera",
     subtitle: "Equipamiento moderno y espacioso",
     description: "Disfruta de nuestras amplias instalaciones, vestuarios cómodos y maquinaria de última generación.",
-    imgSrc: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80",
+    imgSrc: "/imgs/zzzz.jpg",
     imgAlt: "Interior de un gimnasio espacioso, limpio y bien equipado"
   },
   {
@@ -49,7 +49,7 @@ const slidesData = [
     title: "Resultados Garantizados",
     subtitle: "Transforma tu cuerpo y mente",
     description: "Con nuestro apoyo constante y tu dedicación, alcanzarás los resultados que siempre has buscado.",
-    imgSrc: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1769&q=80",
+    imgSrc: "/imgs/no-limits.jpg",
     imgAlt: "Persona mostrando su progreso físico y bienestar en el gimnasio"
   },
   {
@@ -57,7 +57,7 @@ const slidesData = [
     title: "Salud y Bienestar Integral",
     subtitle: "Más que fitness, un estilo de vida",
     description: "Fomentamos un enfoque holístico para tu salud, combinando ejercicio, nutrición y mentalidad positiva.",
-    imgSrc: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80",
+    imgSrc: "/imgs/no-excuses.jpg",
     imgAlt: "Persona practicando yoga en un ambiente sereno y saludable"
   }
 ];

@@ -138,7 +138,7 @@ const CommunitySection = () => {
             className="mt-16 sm:mt-20 text-center"
         >
             <img
-                src="https://images.unsplash.com/photo-1574680096145-f846b5a6abc4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                src="/imgs/logo-bekdoosan-redondo.png"
                 alt="Grupo de personas sonriendo y entrenando juntas en Gimnasio Bekdoosan"
                 className="w-full max-w-3xl mx-auto h-auto rounded-2xl shadow-2xl object-cover"
             />

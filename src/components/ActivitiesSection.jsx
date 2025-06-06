@@ -71,14 +71,42 @@ const gallerySlides = [
   },
   {
     id: 'gallery2',
-    src: "https://images.unsplash.com/photo-1660921033451-ff4c849bfc99?auto=format&fit=crop&w=1000&q=80",
+    src: "/imgs/slide-2-footer.jpg",
+    alt: "Sala de cardio",
+    title: "Espacio Cardio Total",
+    subtitle: "Mejora tu resistencia y salud cardiovascular al máximo."
+  },
+  {
+    id: 'gallery2',
+    src: "/imgs/slide-footer-3.png",
+    alt: "Sala de cardio",
+    title: "Espacio Cardio Total",
+    subtitle: "Mejora tu resistencia y salud cardiovascular al máximo."
+  },
+  {
+    id: 'gallery2',
+    src: "/imgs/slide-footer-6.png",
+    alt: "Sala de cardio",
+    title: "Espacio Cardio Total",
+    subtitle: "Mejora tu resistencia y salud cardiovascular al máximo."
+  },
+  {
+    id: 'gallery2',
+    src: "/imgs/slide-footer-7.png",
+    alt: "Sala de cardio",
+    title: "Espacio Cardio Total",
+    subtitle: "Mejora tu resistencia y salud cardiovascular al máximo."
+  },
+  {
+    id: 'gallery2',
+    src: "/imgs/slide-footer-8.png",
     alt: "Sala de cardio",
     title: "Espacio Cardio Total",
     subtitle: "Mejora tu resistencia y salud cardiovascular al máximo."
   },
   {
     id: 'gallery3',
-    src: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1000&q=80",
+    src: "/imgs/slide-footer-5.png",
     alt: "Entrenamiento funcional con cuerdas",
     title: "Entrenamiento Funcional Dinámico",
     subtitle: "Desarrolla fuerza, agilidad y coordinación."

@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 const ContactSection = () => {
   const contactInfo = [
     { icon: Phone, title: "Teléfono / WhatsApp", value: "921 43 01 51", href: "tel:+34921430151", aria: "Llamar al gimnasio" },
-    { icon: Mail, title: "Email", value: "bekdoosan@beldoosan.com", href: "mailto:bekdoosan@beldoosan.com", aria: "Enviar email al gimnasio" },
+    { icon: Mail, title: "Email", value: "bekdoosan@bekdoosan.com", href: "mailto:bekdoosan@bekdoosan.com", aria: "Enviar email al gimnasio" },
     { icon: MapPin, title: "Dirección", value: "C/ Antonio Coronel 18, 40003 Segovia, España", aria: "Ver dirección en mapa" }
   ];
 
@@ -91,7 +91,7 @@ const ContactSection = () => {
             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-xl h-full">
               <h3 className="text-xl sm:text-2xl font-bold text-pastel-gray-dark mb-6 sm:mb-8">Envíanos un Mensaje</h3>
               <form
-                action="https://formsubmit.co/bekdoosan@beldoosan.com"
+                action="https://formsubmit.co/bekdoosan@bekdoosan.com"
                 method="POST"
                 className="space-y-5 sm:space-y-6"
               >

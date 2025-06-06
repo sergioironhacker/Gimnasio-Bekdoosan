@@ -45,7 +45,7 @@ const Lightbox = ({ src, onClose }) => {
               src={src}
               alt="Imagen ampliada de la galería"
               className="block max-w-full max-h-[85vh] object-contain"
-             src="https://images.unsplash.com/photo-1592177183170-a4256e44e072" />
+              src="https://images.unsplash.com/photo-1592177183170-a4256e44e072" />
             <button
               onClick={onClose}
               className="absolute top-3 right-3 sm:top-4 sm:right-4 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black/50"
