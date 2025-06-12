@@ -99,8 +99,8 @@ const Contact = () => {
             {/* Mapa */}
             <div className="bg-gray-100 dark:bg-dark-card rounded-2xl overflow-hidden shadow-lg">
               <iframe
-                src="https://www.google.com/maps/dir//C.+Sta.+Catalina,+13,+15,+40003+Segovia/@40.9519578,-4.1952985,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd413ed8d8e83501:0x474a2a7cb6f71ede!2m2!1d-4.1128977!2d40.9519871?entry=ttu&g_ep=EgoyMDI1MDYwOS4xIKXMDSoASAFQAw%3D%3D
-"
+                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.320189675603!2d-4.11508282471975!3d40.9519870713534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd413ed8d8e83501%3A0x474a2a7cb6f71ede!2sC.%20Sta.%20Catalina%2C%2013%2C%2015%2C%2040003%20Segovia%2C%20Spain!5e0!3m2!1sen!2ses!4v1718216200000!5m2!1sen!2ses"
+
                 width="100%"
                 height="300"
                 style={{ border: 0 }}
