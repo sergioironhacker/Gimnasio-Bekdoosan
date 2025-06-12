@@ -68,9 +68,9 @@ const Schedule = () => {
 
         {/* Horario de Actividades */}
         <div className="bg-gray-50 dark:bg-dark-surface rounded-2xl p-6 md:p-8 mb-12 shadow-xl">
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto -mx-4 px-4">
             <div className="min-w-full">
-              <div className="grid grid-cols-1 lg:grid-cols-6 gap-4">
+              <div className="flex overflow-x-auto gap-4 lg:grid lg:grid-cols-6">
                 {Object.entries(scheduleData).map(([day, activities]) => (
                   <div key={day} className="bg-white dark:bg-dark-card rounded-xl p-4 shadow-lg">
                     <h3 className="text-lg font-bold text-center mb-4 text-electric-blue">

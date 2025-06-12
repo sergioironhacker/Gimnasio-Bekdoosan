@@ -46,7 +46,7 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                 Información de Contacto
               </h3>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="bg-electric-blue/10 dark:bg-electric-blue/20 p-3 rounded-lg">
@@ -99,7 +99,8 @@ const Contact = () => {
             {/* Mapa */}
             <div className="bg-gray-100 dark:bg-dark-card rounded-2xl overflow-hidden shadow-lg">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1502.2!2d-4.1!3d40.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDU0JzAwLjAiTiA0wrAwNicwMC4wIlc!5e0!3m2!1ses!2ses!4v1"
+                src="https://www.google.com/maps/dir//C.+Sta.+Catalina,+13,+15,+40003+Segovia/@40.9519578,-4.1952985,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd413ed8d8e83501:0x474a2a7cb6f71ede!2m2!1d-4.1128977!2d40.9519871?entry=ttu&g_ep=EgoyMDI1MDYwOS4xIKXMDSoASAFQAw%3D%3D
+"
                 width="100%"
                 height="300"
                 style={{ border: 0 }}

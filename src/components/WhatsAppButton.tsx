@@ -3,8 +3,8 @@ import { MessageCircle, X } from 'lucide-react';
 
 const WhatsAppButton = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
-  const phoneNumber = '34921430151';
+
+  const phoneNumber = '616968219';
   const messages = [
     'Hola, me interesa información sobre las clases',
     'Quiero una clase de prueba gratuita',
@@ -30,8 +30,13 @@ const WhatsAppButton = () => {
           {isOpen ? (
             <X className="h-6 w-6" />
           ) : (
-            <MessageCircle className="h-6 w-6" />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+              alt="WhatsApp logo"
+              className="h-6 w-6"
+            />
           )}
+
         </button>
       </div>
 
@@ -46,7 +51,7 @@ const WhatsAppButton = () => {
               ¿En qué podemos ayudarte hoy?
             </p>
           </div>
-          
+
           <div className="space-y-2">
             {messages.map((message, index) => (
               <button
@@ -58,7 +63,7 @@ const WhatsAppButton = () => {
               </button>
             ))}
           </div>
-          
+
           <div className="mt-4 pt-3 border-t border-gray-200 dark:border-dark-border">
             <button
               onClick={() => sendWhatsAppMessage('Hola, tengo una consulta')}
@@ -67,7 +72,7 @@ const WhatsAppButton = () => {
               Escribir mensaje personalizado
             </button>
           </div>
-          
+
           <div className="mt-3 text-center">
             <p className="text-xs text-gray-500 dark:text-gray-400">
               Powered by WhatsApp

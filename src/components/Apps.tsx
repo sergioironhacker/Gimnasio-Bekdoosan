@@ -29,17 +29,17 @@ const Apps = () => {
     {
       name: 'Wellhub',
       description: 'Accede a Bekdoosan a través de los beneficios corporativos de Wellhub',
-      logo: '🏢',
+      logoImg: '/Wellhub.png',
       benefits: ['Sin costo adicional', 'Empresas asociadas', 'Acceso premium']
     },
     {
-      name: 'Urban Sports Club',
+      name: 'WodBuster',
       description: 'Red europea de fitness con acceso a múltiples gimnasios',
-      logo: '🌍',
+      logoImg: '/wodbuster.png',
       benefits: ['Red internacional', 'Flexibilidad total', 'Múltiples deportes']
     },
     {
-      name: 'ClassPass',
+      name: 'GymPass',
       description: 'Plataforma global para clases de fitness y bienestar',
       logo: '💪',
       benefits: ['Variedad de clases', 'Pagos flexibles', 'App móvil']
@@ -74,10 +74,10 @@ const Apps = () => {
                     <p className="text-electric-blue font-medium">Tu gimnasio en el bolsillo</p>
                   </div>
                 </div>
-                
+
                 <p className="text-gray-600 dark:text-gray-300 mb-8 text-lg leading-relaxed">
-                  Descarga nuestra app oficial y disfruta de una experiencia completa. 
-                  Gestiona tus clases, consulta horarios, realiza pagos y mantente 
+                  Descarga nuestra app oficial y disfruta de una experiencia completa.
+                  Gestiona tus clases, consulta horarios, realiza pagos y mantente
                   conectado con la comunidad Bekdoosan.
                 </p>
 
@@ -110,19 +110,21 @@ const Apps = () => {
                   </button>
                 </div>
               </div>
-              
+
               <div className="p-8 lg:p-12 flex justify-center">
-                <div className="relative">
-                  <div className="w-64 h-96 bg-gradient-to-br from-electric-blue to-electric-purple rounded-3xl shadow-2xl flex items-center justify-center">
-                    <div className="text-white text-center">
-                      <Smartphone className="h-16 w-16 mx-auto mb-4" />
-                      <h4 className="text-xl font-bold mb-2">Bekdoosan</h4>
-                      <p className="text-sm opacity-80">Próximamente</p>
-                    </div>
+                <div className="relative w-66 h-99 rounded-3xl overflow-hidden shadow-2xl">
+                  <img
+                    src="/movil-app.jpg"
+                    alt="App móvil"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/30 via-transparent to-black/50 flex flex-col justify-end p-4 text-white">
+                    <h4 className="text-xl font-bold">Bekdoosan</h4>
+                    <p className="text-sm opacity-80">Tu gimnasio en el bolsillo</p>
                   </div>
-                  <div className="absolute -top-4 -right-4 bg-electric-yellow rounded-full p-2">
+                 {/*  <div className="absolute -top-4 -right-4 bg-electric-yellow rounded-full p-2 shadow-lg">
                     <Star className="h-6 w-6 text-gray-900" />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -134,23 +136,33 @@ const Apps = () => {
           <h3 className="text-2xl font-bold text-center text-gray-900 dark:text-white mb-12">
             Apps <span className="text-electric-green">Asociadas</span>
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {partnerApps.map((app, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-white dark:bg-dark-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="text-center">
-                  <div className="text-4xl mb-4">{app.logo}</div>
+                  <div className="text-4xl mb-4">
+                    {app.logoImg ? (
+                      <img
+                        src={app.logoImg}
+                        alt={app.name}
+                        className="h-12 mx-auto object-contain"
+                      />
+                    ) : (
+                      app.logo
+                    )}
+                  </div>
                   <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                     {app.name}
                   </h4>
                   <p className="text-gray-600 dark:text-gray-300 mb-6 text-sm leading-relaxed">
                     {app.description}
                   </p>
-                  
+
                   <div className="space-y-2">
                     {app.benefits.map((benefit, benefitIndex) => (
                       <div key={benefitIndex} className="flex items-center justify-center text-sm">
@@ -172,7 +184,7 @@ const Apps = () => {
               ¿Tu empresa tiene convenio?
             </h3>
             <p className="mb-6 max-w-2xl mx-auto">
-              Consulta si tu empresa está asociada con alguna de nuestras apps partners 
+              Consulta si tu empresa está asociada con alguna de nuestras apps partners
               y disfruta de descuentos especiales en Bekdoosan.
             </p>
             <button
