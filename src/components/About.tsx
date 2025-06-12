@@ -86,7 +86,7 @@ const About = () => {
           
           <div className="animate-slide-up">
             <img
-              src="https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+              src="/bekhero.jpg"
               alt="Interior del gimnasio Bekdoosan"
               className="rounded-xl shadow-2xl w-full h-auto"
             />
