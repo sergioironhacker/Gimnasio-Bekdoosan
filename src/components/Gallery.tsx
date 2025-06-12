@@ -6,47 +6,47 @@ const Gallery = () => {
 
   const images = [
     {
-      src: 'https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      src: '/8.png',
       alt: 'Entrenamiento TRX',
       category: 'TRX'
     },
     {
-      src: 'https://images.pexels.com/photos/1431282/pexels-photo-1431282.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      src: '/edu.png',
       alt: 'Clase de Taekwondo',
       category: 'Taekwondo'
     },
     {
-      src: 'https://images.pexels.com/photos/317157/pexels-photo-317157.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      src: '/11.png',
       alt: 'Sesión de Yoga',
       category: 'Yoga'
     },
     {
-      src: 'https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      src: '/sliderf3.png',
       alt: 'Gimnasio principal',
       category: 'Instalaciones'
     },
     {
-      src: 'https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      src: '/6.png',
       alt: 'Ciclo Indoor',
       category: 'Ciclo'
     },
     {
-      src: 'https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      src: '/7.png',
       alt: 'Kick Boxing',
       category: 'Kick Boxing'
     },
     {
-      src: 'https://images.pexels.com/photos/1552103/pexels-photo-1552103.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      src: '/8.png',
       alt: 'Entrenamiento grupal',
       category: 'Grupo'
     },
     {
-      src: 'https://images.pexels.com/photos/1552058/pexels-photo-1552058.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      src: '/slider-footer-9.jpg',
       alt: 'Área de cardio',
       category: 'Cardio'
     },
     {
-      src: 'https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      src: '/slider-footer-10.jpg',
       alt: 'Jiu Jitsu',
       category: 'Jiu Jitsu'
     }
@@ -77,7 +77,7 @@ const Gallery = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Nuestra <span className="text-electric-blue">Galería</span>
+            Nuestra Galería <span className="text-electric-blue">Momentos Bekdoosan</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Descubre nuestras instalaciones, clases y la energía que se vive en Bekdoosan

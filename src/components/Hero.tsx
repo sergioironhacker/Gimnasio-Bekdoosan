@@ -6,17 +6,37 @@ const Hero = () => {
 
   const slides = [
     {
-      image: 'https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+      image: '/mente.jpg',
       title: 'Entrena con Nosotros',
       subtitle: 'Tu mejor versión comienza aquí'
     },
     {
-      image: 'https://images.pexels.com/photos/1431282/pexels-photo-1431282.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+      image: '/clases.jpg',
       title: 'Artes Marciales',
       subtitle: 'Taekwondo, Jiu Jitsu y Kick Boxing'
     },
     {
-      image: 'https://images.pexels.com/photos/317157/pexels-photo-317157.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+      image: '/slider.jpg',
+      title: 'Artes Marciales',
+      subtitle: 'Taekwondo, Jiu Jitsu y Kick Boxing'
+    },
+    {
+      image: '/slider2.jpg',
+      title: 'Artes Marciales',
+      subtitle: 'Taekwondo, Jiu Jitsu y Kick Boxing'
+    },
+    {
+      image: '/slider3.jpg',
+      title: 'Artes Marciales',
+      subtitle: 'Taekwondo, Jiu Jitsu y Kick Boxing'
+    },
+    {
+      image: '/slider4.jpg',
+      title: 'Artes Marciales',
+      subtitle: 'Taekwondo, Jiu Jitsu y Kick Boxing'
+    },
+    {
+      image: '/pedalea.jpg',
       title: 'Clases Grupales',
       subtitle: 'TRX, Ciclo Indoor y Yoga'
     }
