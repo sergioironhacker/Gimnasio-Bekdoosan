@@ -47,7 +47,7 @@ const Navbar = () => {
             <img 
               src="/bekdoosan_logo_transparente.png" 
               alt="Bekdoosan Logo" 
-              className="h-10 w-10 mr-3"
+              className="h-18 w-10 mr-3"
             />
             <span className="font-bold text-xl text-gray-900 dark:text-white">
               Bekdoosan

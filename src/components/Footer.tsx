@@ -40,7 +40,7 @@ const Footer = () => {
               <img 
                 src="/bekdoosan_logo_transparente.png" 
                 alt="Bekdoosan Logo" 
-                className="h-8 w-8 mr-2 filter brightness-0 invert"
+                className="h-18 w-12 mr-2 filter brightness-0 invert"
               />
               <span className="font-bold text-2xl">Bekdoosan</span>
             </div>
