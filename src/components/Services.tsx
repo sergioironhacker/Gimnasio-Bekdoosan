@@ -6,6 +6,7 @@ import { MdSportsMma } from 'react-icons/md';
 import { MdOutlineSportsMartialArts } from 'react-icons/md';
 import { MdFitnessCenter } from 'react-icons/md';
 import { Bike } from 'lucide-react';
+import { MdDirectionsRun } from "react-icons/md";
 
 const Services = () => {
   const services = [
@@ -59,8 +60,15 @@ const Services = () => {
       color: 'electric-yellow'
     },
     {
+      icon: <MdDirectionsRun className="h-12 w-12 text-electric-green" />,
+      title: 'Sala Cardio',
+      description: 'En nuestra Sala de Cardio, mejora tu condición ideal para este entrenamiento. Cintas de correr, bicicletas, máquina de subir escaleras, remo, elípticas. Entrena de forma segura, para prevenir lesiones con nuestros planes de entrenamiento',
+      features: ['Sala cardio guiada y libre', 'Alta quema de calorías', 'Fuerza y resistencia'],
+      color: 'electric-yellow'
+    },
+    {
       icon: <Bike className="h-12 w-12 text-electric-indigo" />,
-      title: 'Sala de Cardio',
+      title: 'Ciclo indoor',
       description: 'Preparados para disfrutar de la mejor música pedaleando??? Experimenta la sensación de rodar con nosotros !!🚴🏼Clases vibrantes, motivantes y llenas de energía',
       features: ['Motivación y energía constante', 'Alta quema de calorías', 'Reducción del extres y mejora el animo'],
       color: 'electric-yellow'
