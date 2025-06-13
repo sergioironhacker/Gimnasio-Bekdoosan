@@ -147,14 +147,14 @@ const Services = () => {
           <div className="bg-gradient-to-r from-electric-blue/10 to-electric-green/10 dark:from-electric-blue/20 dark:to-electric-green/20 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">¿Listo para empezar?</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-              Únete a nuestra comunidad y descubre todo lo que puedes lograr. Ofrecemos clases de prueba gratuitas para que encuentres tu disciplina ideal.
+              Únete a nuestra comunidad y descubre todo lo que puedes lograr.💙
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <button
                 onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-electric-blue hover:bg-electric-blue/80 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
               >
-                Clase de Prueba Gratis
+                Contáctanos
               </button>
               <button
                 onClick={() => document.querySelector('#schedule')?.scrollIntoView({ behavior: 'smooth' })}

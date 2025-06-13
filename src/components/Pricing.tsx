@@ -162,7 +162,7 @@ const Pricing = () => {
               ¿Tienes dudas sobre qué plan elegir?
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-              Todos nuestros planes incluyen una clase de prueba gratuita. 
+              Todos nuestros planes incluyen la mejor versión de nosotros. 
               Ven a conocer nuestras instalaciones y encuentra el plan perfecto para ti.
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -170,7 +170,7 @@ const Pricing = () => {
                 onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-electric-blue hover:bg-electric-blue/80 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
               >
-                Clase de Prueba Gratis
+                Contáctanos
               </button>
               <button
                 onClick={() => {
