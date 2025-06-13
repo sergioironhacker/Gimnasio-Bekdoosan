@@ -148,7 +148,7 @@ const Schedule = () => {
                 <Instagram className="h-6 w-6 text-electric-purple" />
                 <Facebook className="h-6 w-6 text-electric-red" />
               </div>
-              <h4 className="font-semibold mb-2">Redes Sociales</h4>
+              <h4 className="font-semibold mb-2">Unete a Nosotros</h4>
               <p className="text-sm text-gray-300">@bekdoosan</p>
             </div>
           </div>

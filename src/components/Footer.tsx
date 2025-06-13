@@ -46,7 +46,7 @@ const Footer = () => {
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Tu centro de fitness y artes marciales en Segovia. 
-              Más de 15 años formando campeones y transformando vidas.
+              Más de 30 años formando campeones y transformando vidas.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="bg-electric-blue/20 hover:bg-electric-blue/30 p-2 rounded-lg transition-colors duration-200">
@@ -121,12 +121,12 @@ const Footer = () => {
               <p className="text-gray-300 text-sm mb-1">Lunes a Viernes: 08:30 - 22:30</p>
               <p className="text-gray-300 text-sm">Sábados: 10:00 - 14:30</p>
             </div>
-            <div className="bg-gray-800 dark:bg-dark-surface rounded-lg p-4">
+           {/*  <div className="bg-gray-800 dark:bg-dark-surface rounded-lg p-4">
               <h4 className="font-semibold text-electric-green mb-2">Clase de Prueba Gratis</h4>
               <p className="text-gray-300 text-sm">
                 Ven a conocer nuestras instalaciones y prueba cualquier disciplina sin compromiso.
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
 

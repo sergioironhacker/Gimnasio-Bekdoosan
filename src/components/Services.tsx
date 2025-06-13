@@ -1,5 +1,5 @@
 import React from 'react';
-import { Zap, Target, Heart, Sword, Users, Award } from 'lucide-react';
+import { Zap, Target, Heart, Sword, Users, Award, Droplet, Lock, Wifi, Coffee, HeartHandshake, Activity } from 'lucide-react';
 
 const Services = () => {
   const services = [
@@ -47,16 +47,44 @@ const Services = () => {
     }
   ];
 
+  // Nuevo array para las instalaciones extra
+  const amenities = [
+    { icon: <Droplet className="h-8 w-8 text-electric-blue" />, label: 'Duchas' },
+    { icon: <Lock className="h-8 w-8 text-electric-green" />, label: 'Taquillas' },
+    { icon: <HeartHandshake className="h-8 w-8 text-electric-purple" />, label: 'Sauna gay' },
+    { icon: <Wifi className="h-8 w-8 text-electric-red" />, label: 'Wifi gratis' },
+    { icon: <Coffee className="h-8 w-8 text-electric-orange" />, label: 'Máquinas Vending' },
+    { icon: <Activity className="h-8 w-8 text-electric-yellow" />, label: 'Wellhub (Gympass)' },
+  ];
+
   return (
     <section id="services" className="py-20 bg-gray-50 dark:bg-dark-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-10">
+  Nuestros <span className="text-electric-blue">Servicios</span>
+  
+</h2>
+
+          {/* BLOQUE NUEVO DE AMENITIES */}
+          <div className="flex justify-center flex-wrap gap-10 mb-8">
+            {amenities.map((amenity, i) => (
+              <div key={i} className="flex flex-col items-center space-y-2">
+                <div className="bg-gray-50 dark:bg-dark-bg p-3 rounded-full shadow-md">
+                  {amenity.icon}
+                </div>
+                <span className="text-gray-700 dark:text-gray-300 font-semibold text-sm">{amenity.label}</span>
+              </div>
+            ))}
+          </div>
+
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Nuestros <span className="text-electric-blue">Servicios</span>
+            Nuestras <span className="text-electric-blue">Actividades</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+
+          {/* <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Descubre todas las disciplinas que ofrecemos para ayudarte a alcanzar tus objetivos
-          </p>
+          </p> */}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

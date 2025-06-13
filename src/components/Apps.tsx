@@ -20,7 +20,7 @@ const Apps = () => {
     },
     {
       icon: <Shield className="h-6 w-6 text-electric-purple" />,
-      title: 'Acceso VIP',
+      title: 'Nuestra App de acceso al club',
       description: 'Contenido exclusivo y ofertas especiales'
     }
   ];
@@ -30,20 +30,20 @@ const Apps = () => {
       name: 'Wellhub',
       description: 'Accede a Bekdoosan a través de los beneficios corporativos de Wellhub',
       logoImg: '/Wellhub.png',
-      benefits: ['Sin costo adicional', 'Empresas asociadas', 'Acceso premium']
+      benefits: ['Variedad de clases', 'Pagos flexibles', 'App móvil']
     },
     {
       name: 'WodBuster',
       description: 'Red europea de fitness con acceso a múltiples gimnasios',
       logoImg: '/wodbuster.png',
-      benefits: ['Red internacional', 'Flexibilidad total', 'Múltiples deportes']
+      benefits: ['Organiza tu rutina y actividades', 'Reserva tus clases', 'App móvil']
     },
-    {
+   /*  {
       name: 'GymPass',
       description: 'Plataforma global para clases de fitness y bienestar',
       logo: '💪',
       benefits: ['Variedad de clases', 'Pagos flexibles', 'App móvil']
-    }
+    } */
   ];
 
   return (

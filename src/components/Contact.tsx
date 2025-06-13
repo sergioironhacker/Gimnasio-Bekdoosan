@@ -35,7 +35,7 @@ const Contact = () => {
             <span className="text-electric-blue">Contacta</span> con Nosotros
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            ¿Tienes preguntas? ¿Quieres una clase de prueba? Estamos aquí para ayudarte
+            ¿Tienes preguntas? Estamos aquí para ayudarte
           </p>
         </div>
 
