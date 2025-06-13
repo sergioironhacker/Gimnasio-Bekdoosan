@@ -1,5 +1,5 @@
 import React from 'react';
-import { Zap, Target, Heart, Sword, Users, Award, Droplet, Lock, Wifi, Coffee, HeartHandshake, Activity } from 'lucide-react';
+import { Zap, Target, Heart, Sword, Users, Award, /* Droplet, */ Lock, Wifi, Coffee, Flame , ShowerHead} from 'lucide-react';
 
 const Services = () => {
   const services = [
@@ -47,13 +47,26 @@ const Services = () => {
     }
   ];
 
+
+  
+
   // Nuevo array para las instalaciones extra
   const amenities = [
-    { icon: <Droplet className="h-8 w-8 text-electric-blue" />, label: 'Duchas' },
+    { icon: <ShowerHead className="h-8 w-8 text-electric-blue" />, label: 'Duchas' },
     { icon: <Lock className="h-8 w-8 text-electric-green" />, label: 'Taquillas' },
-    { icon: <HeartHandshake className="h-8 w-8 text-electric-purple" />, label: 'Sauna' },
+
+
+   { 
+  icon: <img src="/sauna.png" alt="Sauna" className="h-8 w-8 rounded-full object-cover" />, 
+  label: 'Sauna' 
+},
+
+
+
     { icon: <Wifi className="h-8 w-8 text-electric-red" />, label: 'Wifi gratis' },
     { icon: <Coffee className="h-8 w-8 text-electric-orange" />, label: 'Máquinas Vending' },
+
+
  {
   icon: (
     <div className="bg-gray-50 dark:bg-dark-bg p-1 rounded-full shadow-md">
