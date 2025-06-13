@@ -16,6 +16,7 @@ const Gallery = () => {
     { src: '/ggg.jpg', alt: 'Área de cardio', category: 'Cardio' },
     { src: '/ff.jpg', alt: 'Área de cardio', category: 'Cardio' },
      { src: '/gymmodeon.jpg', alt: 'Área de cardio', category: 'Cardio' },
+      { src: '/gallery.jpg', alt: 'Área de cardio', category: 'Cardio' },
     { src: '/slider-footer-10.jpg', alt: 'Jiu Jitsu', category: 'Jiu Jitsu' }
   ];
 
