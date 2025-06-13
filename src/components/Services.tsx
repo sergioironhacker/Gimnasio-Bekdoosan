@@ -54,8 +54,21 @@ const Services = () => {
     { icon: <HeartHandshake className="h-8 w-8 text-electric-purple" />, label: 'Sauna' },
     { icon: <Wifi className="h-8 w-8 text-electric-red" />, label: 'Wifi gratis' },
     { icon: <Coffee className="h-8 w-8 text-electric-orange" />, label: 'Máquinas Vending' },
-    { icon: <Activity className="h-8 w-8 text-electric-yellow" />, label: 'Wellhub (Gympass)' },
+ {
+  icon: (
+    <div className="bg-gray-50 dark:bg-dark-bg p-1 rounded-full shadow-md">
+      <img
+        src="/wellhub-logo.png"
+        alt="Wellhub"
+        className="h-9 w-9 object-contain rounded-full"
+      />
+    </div>
+  ),
+  label: 'Wellhub (Gympass)'
+}
   ];
+
+ /*  public/wellhub-logo.png */
 
   return (
     <section id="services" className="py-20 bg-gray-50 dark:bg-dark-surface">
