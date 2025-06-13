@@ -51,7 +51,7 @@ const Services = () => {
   const amenities = [
     { icon: <Droplet className="h-8 w-8 text-electric-blue" />, label: 'Duchas' },
     { icon: <Lock className="h-8 w-8 text-electric-green" />, label: 'Taquillas' },
-    { icon: <HeartHandshake className="h-8 w-8 text-electric-purple" />, label: 'Sauna gay' },
+    { icon: <HeartHandshake className="h-8 w-8 text-electric-purple" />, label: 'Sauna' },
     { icon: <Wifi className="h-8 w-8 text-electric-red" />, label: 'Wifi gratis' },
     { icon: <Coffee className="h-8 w-8 text-electric-orange" />, label: 'Máquinas Vending' },
     { icon: <Activity className="h-8 w-8 text-electric-yellow" />, label: 'Wellhub (Gympass)' },
