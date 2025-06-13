@@ -16,6 +16,8 @@ export default {
           orange: '#FF6B35',
           purple: '#BF00FF',
           yellow: '#FFFF00',
+          pink: '#FF00CC',
+          indigo: '#6F00FF'
         },
         // Enhanced dark mode colors
         dark: {

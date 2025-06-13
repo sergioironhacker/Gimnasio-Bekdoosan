@@ -11,7 +11,7 @@ const About = () => {
     {
       icon: <Award className="h-8 w-8 text-electric-green" />,
       title: 'Experiencia',
-      description: 'Más de 15 años formando campeones en artes marciales'
+      description: 'Más de 30 años formando campeones en artes marciales'
     },
     {
       icon: <Clock className="h-8 w-8 text-electric-orange" />,
