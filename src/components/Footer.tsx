@@ -62,7 +62,7 @@ const Footer = () => {
           </div>
 
           {/* Enlaces Rápidos */}
-          <div>
+        {/*   <div>
             <h3 className="text-lg font-semibold mb-4 text-electric-blue">Enlaces Rápidos</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
@@ -76,10 +76,10 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Servicios */}
-          <div>
+        {/*   <div>
             <h3 className="text-lg font-semibold mb-4 text-electric-green">Nuestros Servicios</h3>
             <ul className="space-y-2">
               {services.map((service) => (
@@ -88,7 +88,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Información de Contacto */}
           <div>
