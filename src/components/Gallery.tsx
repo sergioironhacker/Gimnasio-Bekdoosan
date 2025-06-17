@@ -5,19 +5,23 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const images = [
-    { src: '/8.png', alt: 'Entrenamiento TRX', category: 'TRX' },
-    { src: '/kick.png', alt: 'Clase de Taekwondo', category: 'Taekwondo' },
-    { src: '/11.png', alt: 'Sesión de Yoga', category: 'Yoga' },
-    { src: '/sliderfff.jpg', alt: 'Gimnasio principal', category: 'Instalaciones' },
-    { src: '/6.png', alt: 'Ciclo Indoor', category: 'Ciclo' },
-    { src: '/7.png', alt: 'Kick Boxing', category: 'Kick Boxing' },
-    { src: '/taek.png', alt: 'Entrenamiento grupal', category: 'Grupo' },
-    { src: '/slider-footer-9.jpg', alt: 'Área de cardio', category: 'Cardio' },
-    { src: '/ggg.jpg', alt: 'Área de cardio', category: 'Cardio' },
-    { src: '/ff.jpg', alt: 'Área de cardio', category: 'Cardio' },
-     { src: '/gymmodeon.jpg', alt: 'Área de cardio', category: 'Cardio' },
-      { src: '/gallery.jpg', alt: 'Área de cardio', category: 'Cardio' },
-    { src: '/slider-footer-10.jpg', alt: 'Jiu Jitsu', category: 'Jiu Jitsu' }
+    { src: '/8.png', alt: 'Entrenamiento TRX', /* category: 'TRX' */ },
+    { src: '/kick.png', alt: 'Clase de Taekwondo', /* category: 'Taekwondo' */ },
+    { src: '/11.png', alt: 'Sesión de Yoga', /* category: 'Yoga' */ },
+    { src: '/sliderfff.jpg', alt: 'Gimnasio principal', /* category: 'Instalaciones' */ },
+    { src: '/6.png', alt: 'Ciclo Indoor', /* category: 'Ciclo' */ },
+    { src: '/7.png', alt: 'Kick Boxing', /* category: 'Kick Boxing' */ },
+    { src: '/taek.png', alt: 'Entrenamiento grupal', /* category: 'Grupo' */ },
+    { src: '/slider-footer-9.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
+    { src: '/ggg.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
+    { src: '/ff.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
+     { src: '/gymmodeon.jpg', alt: 'Área de cardio',/*  category: 'Cardio' */ },
+      { src: '/gallery.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
+      { src: '/a1.jpg', alt: 'Área de cardio',/*  category: 'Cardio' */ },
+      { src: '/a2.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
+      { src: '/a3.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
+      { src: '/a4.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
+    { src: '/slider-footer-10.jpg', alt: 'Jiu Jitsu', /* category: 'Jiu Jitsu' */ }
   ];
 
   const openModal = (index: number) => setSelectedImage(index);
