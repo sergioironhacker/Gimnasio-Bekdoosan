@@ -21,6 +21,7 @@ const Gallery = () => {
       { src: '/a2.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
       { src: '/a3.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
       { src: '/a4.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
+      { src: '/july.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
     { src: '/slider-footer-10.jpg', alt: 'Jiu Jitsu', /* category: 'Jiu Jitsu' */ }
   ];
 
