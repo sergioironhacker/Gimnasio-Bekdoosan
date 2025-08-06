@@ -8,6 +8,13 @@ import { MdFitnessCenter } from 'react-icons/md';
 import { Bike } from 'lucide-react';
 import { MdDirectionsRun } from "react-icons/md";
 
+
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation, Autoplay } from 'swiper/modules';
+
 const Services = () => {
   const services = [
     {
@@ -110,6 +117,38 @@ const Services = () => {
               </div>
             ))}
           </div>
+
+<div className="my-12">
+  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+    Nuestras <span className="text-electric-blue">Instalaciones</span>
+  </h3>
+  <Swiper
+    modules={[Navigation, Autoplay]}
+    spaceBetween={30}
+    slidesPerView={1}
+    navigation
+    autoplay={{ delay: 3000 }}
+    loop
+    breakpoints={{
+      640: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }}
+  >
+    {['/imgs/IMG-20250806-WA0017.jpg', '/imgs/IMG-20250806-WA0018.jpg','/imgs/IMG-20250806-WA0008.jpg','/imgs/IMG-20250806-WA0007.jpg','/imgs/IMG-20250806-WA0006.jpg','/imgs/IMG-20250806-WA0005.jpg', '/imgs/IMG-20250806-WA0016.jpg','/imgs/IMG-20250806-WA0015.jpg','/imgs/IMG-20250806-WA0014.jpg','/imgs/IMG-20250806-WA0013.jpg','/imgs/IMG-20250806-WA0012.jpg','/imgs/IMG-20250806-WA0011.jpg','/imgs/IMG-20250806-WA0010.jpg','/imgs/IMG-20250806-WA0009.jpg'].map((src, index) => (
+      <SwiperSlide key={index}>
+        <img
+          src={src}
+          alt={`Instalación ${index + 1}`}
+          className="w-full h-64 object-cover rounded-xl shadow-md"
+        />
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</div>
+
+
+
 
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Nuestras <span className="text-electric-blue">Actividades</span>
