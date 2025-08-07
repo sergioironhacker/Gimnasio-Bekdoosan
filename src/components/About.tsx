@@ -62,7 +62,36 @@ const About = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="animate-slide-in">
+
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+  <div className="animate-slide-in">
+    <div className="flex items-center gap-3 mb-4">
+      {/* <Users className="h-8 w-8 text-electric-blue" /> */}
+      <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
+        Centro Deportivo <span className="text-electric-blue">Bekdoosan</span>
+      </h3>
+    </div>
+
+    <img
+      src="/Imagen de WhatsApp 2025-08-07 a las 11.01.17_4db498ce.jpg"
+      alt="Motivación en el gimnasio"
+      className="rounded-lg shadow-lg mb-6 w-full object-cover"
+    />
+
+    <div className="bg-electric-blue/10 dark:bg-electric-blue/20 p-4 rounded-lg border-l-4 border-electric-blue text-center">
+      <p className="text-gray-800 dark:text-gray-200 font-medium text-lg">
+        "Haz que cada entrenamiento cuente"
+      </p>
+      <p className="mt-2 text-2xl font-bold text-electric-blue tracking-wide">
+        ¡Te esperamos!
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+          {/* <div className="animate-slide-in">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
               Nuestra Historia
             </h3>
@@ -82,7 +111,7 @@ const About = () => {
                 independientemente de tu nivel o experiencia previa."
               </p>
             </div>
-          </div>
+          </div> */}
           
           <div className="animate-slide-up">
             <img

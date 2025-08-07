@@ -26,6 +26,8 @@ const Gallery = () => {
         { src: '/IMG-20250806-WA0002.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
          { src: '/IMG-20250806-WA0003.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
           { src: '/IMG-20250728-WA0002.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
+           { src: '/Imagen de WhatsApp 2025-08-07 a las 11.01.18_2facc32c.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
+            { src: '/Imagen de WhatsApp 2025-08-07 a las 11.01.17_4db498ce.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
        { src: '/imgs/IMG-20250806-WA0004.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
         { src: '/imgs/IMG-20250806-WA0005.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
          { src: '/imgs/IMG-20250806-WA0006.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },

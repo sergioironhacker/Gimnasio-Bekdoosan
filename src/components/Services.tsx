@@ -7,6 +7,7 @@ import { MdOutlineSportsMartialArts } from 'react-icons/md';
 import { MdFitnessCenter } from 'react-icons/md';
 import { Bike } from 'lucide-react';
 import { MdDirectionsRun } from "react-icons/md";
+import { Briefcase } from "lucide-react"; // asegúrate de importar esto arrib
 
 
 
@@ -117,6 +118,80 @@ const Services = () => {
               </div>
             ))}
           </div>
+
+
+
+
+
+
+
+
+<div className="animate-slide-in flex justify-center mb-16">
+  <div className="max-w-4xl w-full bg-white dark:bg-zinc-900 shadow-xl rounded-2xl border border-electric-blue/30 p-8 md:p-12 text-center">
+    <div className="flex justify-center mb-4">
+      <Briefcase className="h-10 w-10 text-electric-blue" />
+    </div>
+    <h3 className="text-3xl md:text-4xl font-extrabold text-electric-blue mb-8">
+      Empresas
+    </h3>
+
+    <div className="space-y-6 text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+      <div>
+        <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+          Bienestar corporativo que transforma resultados
+        </h4>
+        <p>
+          Impulsa la productividad de tu empresa cuidando lo más importante: tu equipo.
+          Ofrecemos a tus empleados la oportunidad de desconectar, recargar energías
+          y mejorar su salud en todos los niveles.
+        </p>
+        <p>
+          Horarios flexibles, instalaciones adaptadas y un enfoque integral del bienestar.
+          Porque una plantilla activa y motivada es sinónimo de grandes resultados.
+        </p>
+      </div>
+
+      <div>
+        <h4 className="text-lg font-semibold text-electric-blue">
+          ¿Sabías que no invertir en salud puede salir caro?
+        </h4>
+        <ul className="list-disc list-inside text-left md:text-center">
+          <li>Menos energía</li>
+          <li>Menor concentración</li>
+          <li>Más bajas y rotación</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 className="text-lg font-semibold text-electric-blue">Los números hablan:</h4>
+        <p>
+          Estudios del Ministerio de Deportes confirman que la actividad física regular puede
+          <strong> aumentar el rendimiento laboral hasta un 10%</strong>, reduciendo el estrés
+          y mejorando el enfoque y la moral del equipo.
+        </p>
+      </div>
+
+      <div className="bg-electric-blue/10 dark:bg-electric-blue/20 p-4 md:p-6 rounded-lg border-l-4 border-electric-blue mt-6">
+        <p className="text-gray-800 dark:text-gray-200 font-medium text-lg">
+          <strong className="text-electric-blue">Invierte en bienestar, gana en resultados.</strong><br />
+          Haz que tu empresa destaque por su cultura saludable y atractiva.<br />
+          <span className="text-electric-blue font-semibold">
+            Contáctanos y da el primer paso hacia un equipo más sano, motivado y productivo.
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+          
 
 <div className="my-12">
   <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
