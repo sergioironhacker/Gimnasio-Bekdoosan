@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, Award, Clock, Heart } from 'lucide-react';
+import { Users, Award, Heart } from 'lucide-react';
 
 const About = () => {
   const features = [
@@ -12,11 +12,6 @@ const About = () => {
       icon: <Award className="h-8 w-8 text-electric-green" />,
       title: 'Experiencia',
       description: 'Más de 30 años formando campeones en artes marciales'
-    },
-    {
-      icon: <Clock className="h-8 w-8 text-electric-orange" />,
-      title: 'Horarios',
-      description: 'Amplios horarios adaptados a tu rutina diaria'
     },
     {
       icon: <Heart className="h-8 w-8 text-electric-red" />,
@@ -62,57 +57,35 @@ const About = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="animate-slide-in">
+            <div className="flex items-center gap-3 mb-4 justify-center">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white text-center">
+                Centro Deportivo <span className="text-electric-blue">Bekdoosan</span>
+              </h3>
+            </div>
 
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-  <div className="animate-slide-in">
-    <div className="flex items-center gap-3 mb-4">
-      {/* <Users className="h-8 w-8 text-electric-blue" /> */}
-      <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
-        Centro Deportivo <span className="text-electric-blue">Bekdoosan</span>
-      </h3>
-    </div>
+            <img
+              src="/Imagen de WhatsApp 2025-08-07 a las 11.01.17_4db498ce.jpg"
+              alt="Motivación en el gimnasio"
+              className="rounded-lg shadow-lg mb-6 w-full object-cover"
+            />
 
-    <img
-      src="/Imagen de WhatsApp 2025-08-07 a las 11.01.17_4db498ce.jpg"
-      alt="Motivación en el gimnasio"
-      className="rounded-lg shadow-lg mb-6 w-full object-cover"
-    />
-
-    <div className="bg-electric-blue/10 dark:bg-electric-blue/20 p-4 rounded-lg border-l-4 border-electric-blue text-center">
-      <p className="text-gray-800 dark:text-gray-200 font-medium text-lg">
-        "Haz que cada entrenamiento cuente"
-      </p>
-      <p className="mt-2 text-2xl font-bold text-electric-blue tracking-wide">
-        ¡Te esperamos!
-      </p>
-    </div>
-  </div>
-</div>
-
-
-
-          {/* <div className="animate-slide-in">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
-              Nuestra Historia
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-              Fundado con la visión de crear un espacio donde el bienestar físico y mental 
-              van de la mano, Bekdoosan ha crecido hasta convertirse en el gimnasio de 
-              referencia en Segovia.
-            </p>
-            <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-              Ofrecemos una amplia variedad de disciplinas: desde entrenamientos funcionales 
-              con TRX hasta artes marciales tradicionales como Taekwondo y Jiu Jitsu, 
-              pasando por clases dinámicas de Ciclo Indoor y relajantes sesiones de Yoga.
-            </p>
-            <div className="bg-electric-blue/10 dark:bg-electric-blue/20 p-4 rounded-lg border-l-4 border-electric-blue">
-              <p className="text-gray-800 dark:text-gray-200 font-medium">
-                "Nuestro compromiso es ayudarte a alcanzar tu mejor versión, 
-                independientemente de tu nivel o experiencia previa."
+            <div className="bg-white dark:bg-dark-card p-6 rounded-xl border-2 border-electric-blue text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <p
+                className="text-gray-800 dark:text-white text-xl md:text-3xl leading-snug italic"
+                style={{ fontFamily: "'Dancing Script', cursive" }}
+              >
+                "Haz que cada entrenamiento cuente"
+              </p>
+              <p
+                className="mt-4 text-2xl md:text-4xl font-bold text-electric-blue tracking-wide italic"
+                style={{ fontFamily: "'Dancing Script', cursive" }}
+              >
+                ¡Te esperamos!
               </p>
             </div>
-          </div> */}
-          
+          </div>
+
           <div className="animate-slide-up">
             <img
               src="/bekhero.jpg"

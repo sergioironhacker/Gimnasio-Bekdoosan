@@ -1,6 +1,6 @@
 import React from 'react';
 import { Zap, /* Target, */ /* Heart, */ /* Sword, */ Users, /* Award, */ Lock, Wifi, Coffee, ShowerHead, Check, Dumbbell/* Activity, *//* Hand */ } from 'lucide-react';
-import { /* FaFistRaised */ FaSpa,   } from 'react-icons/fa';
+import { /* FaFistRaised */ FaSpa, } from 'react-icons/fa';
 import { MdSportsMma } from 'react-icons/md';
 /* import { GiKarateGi } from 'react-icons/gi'; */
 import { MdOutlineSportsMartialArts } from 'react-icons/md';
@@ -36,7 +36,7 @@ const Services = () => {
       icon: <FaSpa className="h-12 w-12 text-electric-purple" />,
       title: 'Yoga',
       description: 'Encuentra el equilibrio perfecto entre mente y cuerpo mejora tu calidad de vida nunca es tarde para practicar yoga.',
-      features: ['Reduce el estrés', 'Ayuda a relajarse','Reduce presión arterial y cardiaca', 'Mejora la coordinacion y el equilibrio', 'Ayuda a dormir mejor', 'Correccion postural'],
+      features: ['Reduce el estrés', 'Ayuda a relajarse', 'Reduce presión arterial y cardiaca', 'Mejora la coordinacion y el equilibrio', 'Ayuda a dormir mejor', 'Correccion postural'],
       color: 'electric-purple'
     },
     {
@@ -126,60 +126,95 @@ const Services = () => {
 
 
 
-<div className="animate-slide-in flex justify-center mb-16">
-  <div className="max-w-4xl w-full bg-white dark:bg-zinc-900 shadow-xl rounded-2xl border border-electric-blue/30 p-8 md:p-12 text-center">
+          {/*  negocio  */}
+
+
+
+
+<div className="animate-slide-in flex justify-center px-4 sm:px-6 lg:px-8 mb-16">
+  <div className="max-w-4xl w-full bg-white dark:bg-zinc-900 shadow-xl rounded-2xl border border-electric-blue/30 p-6 sm:p-10 md:p-12 text-center">
+    
+    {/* Ícono */}
     <div className="flex justify-center mb-4">
-      <Briefcase className="h-10 w-10 text-electric-blue" />
+      <Briefcase className="h-10 w-10 text-white" />
     </div>
+
+    {/* Título principal */}
     <h3 className="text-3xl md:text-4xl font-extrabold text-electric-blue mb-8">
       Empresas
     </h3>
 
-    <div className="space-y-6 text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+    {/* Contenido principal */}
+    <div className="space-y-10 text-gray-700 dark:text-gray-300 text-base sm:text-lg leading-relaxed text-center">
+      
+      {/* Bloque 1 */}
       <div>
-        <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+        <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
           Bienestar corporativo que transforma resultados
         </h4>
         <p>
-          Impulsa la productividad de tu empresa cuidando lo más importante: tu equipo.
-          Ofrecemos a tus empleados la oportunidad de desconectar, recargar energías
-          y mejorar su salud en todos los niveles.
+          Impulsa la productividad de tu empresa cuidando lo más importante: tu equipo. Ofrecemos a tus empleados la oportunidad de desconectar, recargar energías y mejorar su salud en todos los niveles.
         </p>
-        <p>
-          Horarios flexibles, instalaciones adaptadas y un enfoque integral del bienestar.
-          Porque una plantilla activa y motivada es sinónimo de grandes resultados.
+        <p className="mt-3">
+          Horarios flexibles, instalaciones adaptadas y un enfoque integral del bienestar. Porque una plantilla activa y motivada es sinónimo de grandes resultados.
         </p>
       </div>
 
+      {/* Bloque 2 */}
+     <div>
+  <h4 className="text-lg font-semibold text-electric-blue mb-4 text-center">
+    ¿Sabías que no invertir en salud puede salir caro?
+  </h4>
+  <div className="space-y-1 text-center text-gray-700 dark:text-gray-300">
+    <p>Menos energía</p>
+    <p>Menor concentración</p>
+    <p>Más bajas y rotación</p>
+  </div>
+</div>
+
+      {/* Bloque 3 */}
       <div>
-        <h4 className="text-lg font-semibold text-electric-blue">
-          ¿Sabías que no invertir en salud puede salir caro?
+        <h4 className="text-lg font-semibold text-electric-blue mb-2">
+          Los números hablan:
         </h4>
-        <ul className="list-disc list-inside text-left md:text-center">
-          <li>Menos energía</li>
-          <li>Menor concentración</li>
-          <li>Más bajas y rotación</li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 className="text-lg font-semibold text-electric-blue">Los números hablan:</h4>
         <p>
           Estudios del Ministerio de Deportes confirman que la actividad física regular puede
-          <strong> aumentar el rendimiento laboral hasta un 10%</strong>, reduciendo el estrés
-          y mejorando el enfoque y la moral del equipo.
+          <strong> aumentar el rendimiento laboral hasta un 10%</strong>, reduciendo el estrés y mejorando el enfoque y la moral del equipo.
         </p>
       </div>
 
-      <div className="bg-electric-blue/10 dark:bg-electric-blue/20 p-4 md:p-6 rounded-lg border-l-4 border-electric-blue mt-6">
-        <p className="text-gray-800 dark:text-gray-200 font-medium text-lg">
-          <strong className="text-electric-blue">Invierte en bienestar, gana en resultados.</strong><br />
-          Haz que tu empresa destaque por su cultura saludable y atractiva.<br />
-          <span className="text-electric-blue font-semibold">
-            Contáctanos y da el primer paso hacia un equipo más sano, motivado y productivo.
-          </span>
+      {/* CTA final mejorado */}
+      <div className="bg-white dark:bg-zinc-800 p-6 sm:p-8 rounded-2xl border border-electric-blue/30 shadow-md mt-10">
+        <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          Invierte en bienestar, gana en resultados
+        </h4>
+        <p className="text-gray-700 dark:text-gray-300 text-base sm:text-lg leading-relaxed">
+          Haz que tu empresa destaque por su cultura saludable y atractiva.
         </p>
+        <p className="mt-4 text-electric-blue font-semibold text-lg sm:text-xl">
+          Contáctanos y da el primer paso hacia un equipo más sano, motivado y productivo.
+        </p>
+
+        {/* Ícono animado despacio */}
+        <div className="mt-6 flex justify-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="h-12 w-12 text-electric-blue animate-spin opacity-80"
+            style={{ animationDuration: '6s' }}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 6v3m12-3v3M6 15v3m12-3v3M3 9h3v6H3V9zm15 0h3v6h-3V9zM9 12h6"
+            />
+          </svg>
+        </div>
       </div>
+
     </div>
   </div>
 </div>
@@ -191,38 +226,40 @@ const Services = () => {
 
 
 
-          
-
-<div className="my-12">
-  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-    Nuestras <span className="text-electric-blue">Instalaciones</span>
-  </h3>
-  <Swiper
-    modules={[Navigation, Autoplay]}
-    spaceBetween={30}
-    slidesPerView={1}
-    navigation
-    autoplay={{ delay: 3000 }}
-    loop
-    breakpoints={{
-      640: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 }
-    }}
-  >
-    {['/imgs/IMG-20250806-WA0017.jpg', '/imgs/IMG-20250806-WA0018.jpg','/imgs/IMG-20250806-WA0008.jpg','/imgs/IMG-20250806-WA0007.jpg','/imgs/IMG-20250806-WA0006.jpg','/imgs/IMG-20250806-WA0005.jpg', '/imgs/IMG-20250806-WA0016.jpg','/imgs/IMG-20250806-WA0015.jpg','/imgs/IMG-20250806-WA0014.jpg','/imgs/IMG-20250806-WA0013.jpg','/imgs/IMG-20250806-WA0012.jpg','/imgs/IMG-20250806-WA0011.jpg','/imgs/IMG-20250806-WA0010.jpg','/imgs/IMG-20250806-WA0009.jpg'].map((src, index) => (
-      <SwiperSlide key={index}>
-        <img
-          src={src}
-          alt={`Instalación ${index + 1}`}
-          className="w-full h-64 object-cover rounded-xl shadow-md"
-        />
-      </SwiperSlide>
-    ))}
-  </Swiper>
-</div>
 
 
+
+
+          <div className="my-12">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+              Nuestras <span className="text-electric-blue">Instalaciones</span>
+            </h3>
+            <Swiper
+              modules={[Navigation, Autoplay]}
+              spaceBetween={30}
+              slidesPerView={1}
+              navigation
+              autoplay={{ delay: 3000 }}
+              loop
+              breakpoints={{
+                640: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+              }}
+            >
+              {['/imgs/IMG-20250806-WA0017.jpg', '/imgs/IMG-20250806-WA0018.jpg', '/imgs/IMG-20250806-WA0008.jpg', '/imgs/IMG-20250806-WA0007.jpg', '/imgs/IMG-20250806-WA0006.jpg', '/imgs/IMG-20250806-WA0016.jpg', '/imgs/IMG-20250806-WA0015.jpg', '/imgs/IMG-20250806-WA0014.jpg', '/imgs/IMG-20250806-WA0013.jpg', '/imgs/IMG-20250806-WA0012.jpg', '/imgs/IMG-20250806-WA0011.jpg', '/imgs/IMG-20250806-WA0010.jpg', '/imgs/IMG-20250806-WA0009.jpg'].map((src, index) => (
+                <SwiperSlide key={index}>
+                  <img
+                    src={src}
+                    alt={`Instalación ${index + 1}`}
+                    className="w-full h-64 object-cover rounded-xl shadow-md"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
+{/* actividades  */}
 
 
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -230,31 +267,57 @@ const Services = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white dark:bg-dark-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="flex flex-col items-center text-center">
-                <div className="mb-6 p-4 bg-gray-50 dark:bg-dark-bg rounded-full">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{service.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                <ul className="space-y-2 w-full">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-500 dark:text-gray-400">
-                      <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
+        <div className="my-12">
+  
+  <Swiper
+    modules={[Navigation, Autoplay]}
+    spaceBetween={30}
+    slidesPerView={1}
+    navigation
+    autoplay={{ delay: 4000 }}
+    loop
+    breakpoints={{
+      640: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }}
+  >
+    {services.map((service, index) => (
+  <SwiperSlide key={index}>
+    <div
+      className="bg-white dark:bg-dark-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-slide-up flex flex-col justify-between"
+      style={{ animationDelay: `${index * 0.1}s`, minHeight: '450px' }}
+    >
+      <div className="flex flex-col items-center text-center">
+        <div className="mb-6 p-4 bg-gray-50 dark:bg-dark-bg rounded-full">
+          {service.icon}
         </div>
+        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{service.title}</h3>
+        <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+        <ul className="space-y-2 w-full">
+          {service.features.map((feature, featureIndex) => (
+            <li key={featureIndex} className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+              <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+              {feature}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </SwiperSlide>
+))}
+  </Swiper>
+</div>
+
+
+
+
+
+
+
+
+
+
 
         {/* CTA Section */}
         <div className="mt-16 text-center">

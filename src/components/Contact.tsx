@@ -81,7 +81,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
+             {/*    <div className="flex items-start space-x-4">
                   <div className="bg-electric-purple/10 dark:bg-electric-purple/20 p-3 rounded-lg">
                     <Clock className="h-6 w-6 text-electric-purple" />
                   </div>
@@ -92,7 +92,7 @@ const Contact = () => {
                       Sábados: 10:00 - 14:30
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 

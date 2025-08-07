@@ -19,30 +19,22 @@ const Gallery = () => {
       { src: '/gallery.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
       { src: '/a1.jpg', alt: 'Área de cardio',/*  category: 'Cardio' */ },
       { src: '/a2.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
-      { src: '/a3.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
+    
       { src: '/a4.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
       { src: '/july.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
        { src: '/IMG-20250806-WA0001.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
-        { src: '/IMG-20250806-WA0002.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
+       
          { src: '/IMG-20250806-WA0003.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
           { src: '/IMG-20250728-WA0002.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
            { src: '/Imagen de WhatsApp 2025-08-07 a las 11.01.18_2facc32c.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
             { src: '/Imagen de WhatsApp 2025-08-07 a las 11.01.17_4db498ce.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
        { src: '/imgs/IMG-20250806-WA0004.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
-        { src: '/imgs/IMG-20250806-WA0005.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
-         { src: '/imgs/IMG-20250806-WA0006.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
-          { src: '/imgs/IMG-20250806-WA0007.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
-           { src: '/imgs/IMG-20250806-WA0008.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
-            { src: '/imgs/IMG-20250806-WA0009.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
-             { src: '/imgs/IMG-20250806-WA0010.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
-              { src: '/imgs/IMG-20250806-WA0011.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
-               { src: '/imgs/IMG-20250806-WA0012.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
-                { src: '/imgs/IMG-20250806-WA0013.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
-                 { src: '/imgs/IMG-20250806-WA0014.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
-                 { src: '/imgs/IMG-20250806-WA0015.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
-                 { src: '/imgs/IMG-20250806-WA0016.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
-                 { src: '/imgs/IMG-20250806-WA0017.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
-                 { src: '/imgs/IMG-20250806-WA0018.jpg', alt: 'Área de cardio', /* category: 'Cardio' */ },
+        
+      
+         
+          
+           
+
     { src: '/slider-footer-10.jpg', alt: 'Jiu Jitsu', /* category: 'Jiu Jitsu' */ }
   ];
 
