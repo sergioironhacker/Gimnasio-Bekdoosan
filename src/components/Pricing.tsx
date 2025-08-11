@@ -1,20 +1,10 @@
 import React from 'react';
-import { Zap } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
 
 const Pricing = () => {
   const plan = {
-    name: 'Mensual',
-    price: '40,00',
-    period: 'mes',
-    description: 'Perfecto para probar nuestros servicios',
-    features: [
-      'Acceso completo al gimnasio',
-      'Todas las clases grupales',
-      'Uso de todas las instalaciones',
-      'Asesoramiento inicial gratuito'
-    ],
     color: 'electric-blue',
-    icon: <Zap className="h-6 w-6" />,
+    icon: <DollarSign className="h-6 w-6" />,
   };
 
   return (
@@ -30,58 +20,74 @@ const Pricing = () => {
           </p>
         </div>
 
-        {/* Solo una tarjeta */}
-        <div className="max-w-sm mx-auto">
-          <div className={`relative bg-white dark:bg-dark-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2`}>
-            <div className="text-center mb-6">
-              <div className={`inline-flex items-center justify-center w-12 h-12 bg-${plan.color}/10 dark:bg-${plan.color}/20 rounded-full mb-4`}>
-                <div className={`text-${plan.color}`}>
-                  {plan.icon}
+        {/* Card completa con estilo mejorado */}
+        <div className="max-w-lg mx-auto">
+          <div className="relative rounded-2xl p-[2px] bg-gradient-to-r from-electric-blue to-electric-blue/60 shadow-lg hover:shadow-electric-blue/30 transition-all duration-300 hover:-translate-y-2">
+            <div className="bg-white dark:bg-dark-card rounded-2xl p-6">
+              
+              {/* Header */}
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-electric-blue/10 dark:bg-electric-blue/20 rounded-full mb-4">
+                  <div className="text-electric-blue">
+                    {plan.icon}
+                  </div>
                 </div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  Tarifas Gimnasio Bekdoosan
+                </h3>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                {plan.name}
-              </h3>
-              <div className="mb-2">
-                <span className="text-3xl font-bold text-gray-900 dark:text-white">
-                  {plan.price}€
-                </span>
-                <span className="text-gray-600 dark:text-gray-400 ml-1">
-                  / {plan.period}
-                </span>
+
+              {/* Tabla de precios con efecto zebra */}
+              <div className="overflow-x-auto mb-6">
+                <table className="w-full text-sm text-left text-gray-600 dark:text-gray-300 border-collapse">
+                  <tbody>
+                    {[
+                      ["Fitness (todos los días)", "41 € / mes"],
+                      ["Ciclo Indoor", "40 € / mes"],
+                      ["Yoga", "40 € / mes"],
+                      ["TRX – Entrenamiento Funcional", "40 € / mes"],
+                      ["Taekwondo Infantil (4 a 8 años)", "41 € / mes"],
+                      ["Taekwondo (9 a 13 años)", "44 € / mes"],
+                      ["Taekwondo (14 años en adelante)", "48 € / mes"],
+                      ["Kick Boxing", "48 € / mes"],
+                      ["Jiu Jitsu", "48 € / mes"],
+                      ["Todo incluido", "49,50 € / mes"],
+                      ["Todo incluido (con 1 Arte Marcial)", "56 € / mes"],
+                      ["Todo incluido (todas las actividades)", "59 € / mes"],
+                      ["Bono 10 pases (3 meses)", "45 €"],
+                      ["Pase de un día", "8 €"]
+                    ].map(([actividad, precio], i) => (
+                      <tr 
+                        key={i} 
+                        className={`${i % 2 === 0 ? 'bg-gray-50 dark:bg-gray-800/50' : ''} border-b border-gray-200 dark:border-gray-700`}
+                      >
+                        <td className="py-2 pr-4">{actividad}</td>
+                        <td className="py-2 font-semibold text-electric-blue">{precio}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                {plan.description}
-              </p>
+
+              {/* Descuentos */}
+              <div className="mb-6">
+                <h4 className="font-bold text-gray-900 dark:text-white mb-2">Descuentos (no acumulables):</h4>
+                <ul className="list-disc list-inside space-y-1 text-sm text-gray-700 dark:text-gray-300">
+                  <li>Mayores de 65 años → 10%</li>
+                  <li>Descuento familiar (3 o más personas) → 10%</li>
+                  <li>Pago Trimestral → 5%</li>
+                  <li>Pago Semestral → 10%</li>
+                  <li>Pago Anual → 20%</li>
+                </ul>
+              </div>
+
+              {/* Bloque destacado con degradado */}
+              <div className="bg-gradient-to-r from-electric-blue to-electric-blue/70 text-white font-semibold text-center p-4 rounded-lg shadow-md">
+                <p>Sauna incluida todos los días</p>
+                <p>Uso obligatorio de toalla en todas las salas</p>
+              </div>
+
             </div>
-
-            <ul className="space-y-3 mb-8">
-              {plan.features.map((feature, featureIndex) => (
-                <li key={featureIndex} className="flex items-start">
-                  <svg
-                    className={`h-5 w-5 text-${plan.color} mr-3 mt-0.5 flex-shrink-0`}
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-sm text-gray-600 dark:text-gray-300">
-                    {feature}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            <button
-              onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className={`w-full bg-${plan.color} hover:bg-${plan.color}/80 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105`}
-            >
-              Elegir Plan
-            </button>
           </div>
         </div>
       </div>
