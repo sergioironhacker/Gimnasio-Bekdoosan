@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import { DollarSign, Maximize2, Minimize2 } from 'lucide-react';
+import React from 'react';
+import { Euro } from 'lucide-react';
 
 const Pricing = () => {
-  const [expanded, setExpanded] = useState(false);
-
   const plan = {
     color: 'electric-blue',
-    icon: <DollarSign className="h-6 w-6" />,
+    // 👇 Euro más grande y con trazo más gordito
+    icon: <Euro className="h-7 w-7" strokeWidth={2.5} />,
   };
 
   const tarifas = [
@@ -47,33 +46,25 @@ const Pricing = () => {
           </p>
         </div>
 
-        {/* Card principal */}
+        {/* Card */}
         <div className="max-w-lg mx-auto">
           <div className="relative rounded-2xl p-[2px] bg-gradient-to-r from-electric-blue to-electric-blue/60 shadow-lg hover:shadow-electric-blue/30 transition-all duration-300 hover:-translate-y-2">
             <div className="bg-white dark:bg-dark-card rounded-2xl p-6">
               
               {/* Header */}
-              <div className="flex items-center justify-between mb-6">
-                <div className="text-center flex-1">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-electric-blue/10 dark:bg-electric-blue/20 rounded-full mb-4">
-                    <div className="text-electric-blue">
-                      {plan.icon}
-                    </div>
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-electric-blue/10 dark:bg-electric-blue/20 rounded-full mb-4">
+                  <div className="text-electric-blue">
+                    {plan.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                    Tarifas Gimnasio Bekdoosan
-                  </h3>
                 </div>
-                <button 
-                  onClick={() => setExpanded(!expanded)} 
-                  className="p-2 text-electric-blue hover:bg-electric-blue/10 rounded-full transition"
-                >
-                  {expanded ? <Minimize2 className="h-5 w-5" /> : <Maximize2 className="h-5 w-5" />}
-                </button>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  Tarifas Gimnasio Bekdoosan
+                </h3>
               </div>
 
-              {/* Tabla de tarifas */}
-              <div className={`overflow-x-auto mb-6 transition-all duration-500 ${expanded ? "max-h-[1000px]" : "max-h-[250px]"} overflow-hidden`}>
+              {/* Tabla de precios */}
+              <div className="overflow-x-auto mb-6">
                 <table className="w-full text-sm text-left text-gray-600 dark:text-gray-300 border-collapse">
                   <tbody>
                     {tarifas.map(([actividad, precio], i) => (

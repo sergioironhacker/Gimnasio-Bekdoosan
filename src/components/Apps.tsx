@@ -1,5 +1,5 @@
 import React from 'react';
-import { Smartphone, Download, Users, Star, Zap, Shield } from 'lucide-react';
+import { Smartphone, Users, Star, Zap, Shield } from 'lucide-react';
 
 const Apps = () => {
   const appFeatures = [
@@ -37,13 +37,7 @@ const Apps = () => {
       description: 'Red europea de fitness con acceso a múltiples gimnasios',
       logoImg: '/wodbuster.png',
       benefits: ['Organiza tu rutina y actividades', 'Reserva tus clases', 'App móvil']
-    },
-   /*  {
-      name: 'GymPass',
-      description: 'Plataforma global para clases de fitness y bienestar',
-      logo: '💪',
-      benefits: ['Variedad de clases', 'Pagos flexibles', 'App móvil']
-    } */
+    }
   ];
 
   return (
@@ -100,14 +94,22 @@ const Apps = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-                  <button className="bg-black text-white px-6 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:bg-gray-800 transition-colors duration-200">
-                    <Download className="h-5 w-5" />
+                  <a
+                    href="https://apps.apple.com/app/wodbuster/id1496140006"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-black text-white px-6 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:bg-gray-800 transition-colors duration-200"
+                  >
                     <span>App Store</span>
-                  </button>
-                  <button className="bg-electric-green text-white px-6 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:bg-electric-green/80 transition-colors duration-200">
-                    <Download className="h-5 w-5" />
+                  </a>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.wodbuster"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-electric-green text-white px-6 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:bg-electric-green/80 transition-colors duration-200"
+                  >
                     <span>Google Play</span>
-                  </button>
+                  </a>
                 </div>
               </div>
 
@@ -122,9 +124,6 @@ const Apps = () => {
                     <h4 className="text-xl font-bold">Bekdoosan</h4>
                     <p className="text-sm opacity-80">Tu gimnasio en el bolsillo</p>
                   </div>
-                 {/*  <div className="absolute -top-4 -right-4 bg-electric-yellow rounded-full p-2 shadow-lg">
-                    <Star className="h-6 w-6 text-gray-900" />
-                  </div> */}
                 </div>
               </div>
             </div>
