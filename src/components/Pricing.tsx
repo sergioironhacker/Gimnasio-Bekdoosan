@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { DollarSign, Maximize2, X } from 'lucide-react';
+import React, { useState } from 'react';
+import { DollarSign, Maximize2, Minimize2 } from 'lucide-react';
 
 const Pricing = () => {
-  const [open, setOpen] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   const plan = {
     color: 'electric-blue',
@@ -33,15 +33,6 @@ const Pricing = () => {
     ["Pago Semestral", "10%"],
     ["Pago Anual", "20%"],
   ];
-
-  // 👉 Cerrar modal con tecla ESC
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === "Escape") setOpen(false);
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
 
   return (
     <section id="pricing" className="py-20 bg-white dark:bg-dark-bg">
@@ -74,15 +65,15 @@ const Pricing = () => {
                   </h3>
                 </div>
                 <button 
-                  onClick={() => setOpen(true)} 
+                  onClick={() => setExpanded(!expanded)} 
                   className="p-2 text-electric-blue hover:bg-electric-blue/10 rounded-full transition"
                 >
-                  <Maximize2 className="h-5 w-5" />
+                  {expanded ? <Minimize2 className="h-5 w-5" /> : <Maximize2 className="h-5 w-5" />}
                 </button>
               </div>
 
               {/* Tabla de tarifas */}
-              <div className="overflow-x-auto mb-6">
+              <div className={`overflow-x-auto mb-6 transition-all duration-500 ${expanded ? "max-h-[1000px]" : "max-h-[250px]"} overflow-hidden`}>
                 <table className="w-full text-sm text-left text-gray-600 dark:text-gray-300 border-collapse">
                   <tbody>
                     {tarifas.map(([actividad, precio], i) => (
@@ -98,7 +89,7 @@ const Pricing = () => {
                 </table>
               </div>
 
-              {/* Descuentos mejorados (una sola línea) */}
+              {/* Descuentos */}
               <div className="mb-6">
                 <h4 className="font-bold text-gray-900 dark:text-white mb-4">Descuentos (no acumulables):</h4>
                 <div className="space-y-2">
@@ -124,44 +115,6 @@ const Pricing = () => {
           </div>
         </div>
       </div>
-
-      {/* Modal de tabla ampliada */}
-      {open && (
-        <div 
-          className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4"
-          onClick={() => setOpen(false)} // 👉 cerrar clicando fuera
-        >
-          <div 
-            className="bg-white dark:bg-dark-card rounded-2xl shadow-2xl w-full max-w-4xl p-6 relative"
-            onClick={(e) => e.stopPropagation()} // 👉 evitar cierre al hacer clic dentro
-          >
-            <button 
-              onClick={() => setOpen(false)} 
-              className="absolute top-4 right-4 p-3 bg-red-500 text-white rounded-full shadow-lg hover:bg-red-600 transition"
-            >
-              <X className="h-6 w-6" />
-            </button>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-              Tarifas Gimnasio Bekdoosan (Vista ampliada)
-            </h3>
-            <div className="overflow-x-auto">
-              <table className="w-full text-base text-left text-gray-600 dark:text-gray-300 border-collapse">
-                <tbody>
-                  {tarifas.map(([actividad, precio], i) => (
-                    <tr 
-                      key={i} 
-                      className={`${i % 2 === 0 ? 'bg-gray-50 dark:bg-gray-800/50' : ''} border-b border-gray-200 dark:border-gray-700`}
-                    >
-                      <td className="py-3 pr-6">{actividad}</td>
-                      <td className="py-3 font-semibold text-electric-blue">{precio}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 };
