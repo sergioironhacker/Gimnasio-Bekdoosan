@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Instagram, Facebook, Globe } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const [flipped, setFlipped] = useState(false);
 
   return (
     <footer className="bg-gray-900 dark:bg-dark-bg text-white">
@@ -58,6 +59,43 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Bloque Flip Card */}
+        <div className="mt-16 flex flex-col items-center">
+          <h3 className="text-xl font-bold mb-6 text-electric-blue text-center">
+            Disfruta de nuestro campeonato de futbolín con un premio espectacular para el equipo ganador <br /> 💙
+          </h3>
+
+          <div
+            className="w-full max-w-sm h-64 perspective cursor-pointer"
+            onClick={() => setFlipped(!flipped)}
+          >
+            <div
+              className={`relative w-full h-full transition-transform duration-700 transform-style-preserve-3d ${
+                flipped ? 'rotate-y-180' : ''
+              }`}
+            >
+              {/* Frente */}
+              <div className="absolute inset-0 backface-hidden rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src="/Imagen de WhatsApp 2025-09-09 a las 12.29.24_56d82865.jpg"
+                  alt="Campeonato Futbolín Frente"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Reverso */}
+              <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src="/Imagen de WhatsApp 2025-09-09 a las 12.29.24_baaea69f.jpg"
+                  alt="Campeonato Futbolín Reverso"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+          <p className="text-gray-400 text-sm mt-4">Haz clic en la tarjeta para girarla</p>
+        </div>
+
         {/* Separador */}
         <div className="border-t border-gray-800 dark:border-dark-border mt-12 pt-8 text-center">
           <p className="text-gray-400 text-sm">
@@ -68,6 +106,22 @@ const Footer = () => {
           </p>
         </div>
       </div>
+
+      {/* Estilos extra para efecto 3D */}
+      <style jsx>{`
+        .perspective {
+          perspective: 1000px;
+        }
+        .transform-style-preserve-3d {
+          transform-style: preserve-3d;
+        }
+        .backface-hidden {
+          backface-visibility: hidden;
+        }
+        .rotate-y-180 {
+          transform: rotateY(180deg);
+        }
+      `}</style>
     </footer>
   );
 };
