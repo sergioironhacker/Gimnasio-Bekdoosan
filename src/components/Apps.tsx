@@ -6,22 +6,22 @@ import { motion } from "framer-motion";
 const Apps = () => {
   const appFeatures = [
     {
-      icon: <Zap className="h-6 w-6 text-electric-blue" />,
+      icon: <Zap className="h-6 w-6 text-sky-500" />,
       title: "Reserva de Clases",
       description: "Reserva tu plaza en las clases con un solo toque",
     },
     {
-      icon: <Users className="h-6 w-6 text-electric-green" />,
+      icon: <Users className="h-6 w-6 text-emerald-500" />,
       title: "Seguimiento Personal",
       description: "Monitorea tu progreso y objetivos fitness",
     },
     {
-      icon: <Star className="h-6 w-6 text-electric-yellow" />,
+      icon: <Star className="h-6 w-6 text-yellow-500" />,
       title: "Horarios Actualizados",
       description: "Consulta horarios y cambios en tiempo real",
     },
     {
-      icon: <Shield className="h-6 w-6 text-electric-purple" />,
+      icon: <Shield className="h-6 w-6 text-purple-500" />,
       title: "App de acceso al club",
       description: "Contenido exclusivo y ofertas especiales",
     },
@@ -37,8 +37,7 @@ const Apps = () => {
     },
     {
       name: "WodBuster",
-      description:
-        "Red europea de fitness con acceso a múltiples gimnasios",
+      description: "Red europea de fitness con acceso a múltiples gimnasios",
       logoImg: "/wodbuster.png",
       benefits: [
         "Organiza tu rutina y actividades",
@@ -51,7 +50,6 @@ const Apps = () => {
   return (
     <section id="apps" className="py-20 bg-gray-50 dark:bg-dark-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* Encabezado */}
         <motion.div
           className="text-center mb-16"
@@ -60,47 +58,42 @@ const Apps = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Nuestra{" "}
-            <span className="text-electric-blue">App</span> &{" "}
-            <span className="text-electric-green">Partners</span>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
+            Nuestra <span className="text-sky-500">App</span> &
+            <span className="text-emerald-500"> Partners</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Gestiona tu entrenamiento desde tu móvil y descubre nuestras apps
-            asociadas
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            Gestiona tu entrenamiento desde tu móvil y descubre nuestras apps asociadas
           </p>
         </motion.div>
 
         {/* App Bekdoosan */}
         <div className="mb-20">
           <motion.div
-            className="bg-gradient-to-r from-electric-blue/10 to-electric-purple/10 dark:from-electric-blue/20 dark:to-electric-purple/20 rounded-3xl overflow-hidden"
+            className="bg-gradient-to-r from-sky-100/50 to-purple-100/50 dark:from-sky-900/20 dark:to-purple-900/20 rounded-3xl overflow-hidden shadow-xl"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
-              
               {/* Texto */}
               <div className="p-8 lg:p-12">
                 <div className="flex items-center mb-6">
-                  <div className="bg-electric-blue rounded-2xl p-3 mr-4 shadow-lg shadow-electric-blue/40">
+                  <div className="bg-sky-500 rounded-2xl p-3 mr-4 shadow-lg shadow-sky-500/40">
                     <Smartphone className="h-8 w-8 text-white" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
                       App Bekdoosan
                     </h3>
-                    <p className="text-electric-blue font-medium">
+                    <p className="text-sky-500 font-medium">
                       Tu gimnasio en el bolsillo
                     </p>
                   </div>
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 mb-8 text-lg leading-relaxed">
-                  Descarga nuestra app oficial y disfruta de una experiencia
-                  completa. Gestiona tus clases, consulta horarios, realiza
-                  pagos y mantente conectado con la comunidad Bekdoosan.
+                <p className="text-gray-600 dark:text-gray-300 mb-8 text-base md:text-lg leading-relaxed">
+                  Descarga nuestra app oficial y disfruta de una experiencia completa. Gestiona tus clases, consulta horarios, realiza pagos y mantente conectado con la comunidad Bekdoosan.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
@@ -115,10 +108,10 @@ const Apps = () => {
                     >
                       <div className="flex-shrink-0 mt-1">{feature.icon}</div>
                       <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-white text-sm">
+                        <h4 className="font-semibold text-gray-900 dark:text-white text-sm md:text-base">
                           {feature.title}
                         </h4>
-                        <p className="text-gray-600 dark:text-gray-400 text-xs">
+                        <p className="text-gray-600 dark:text-gray-400 text-xs md:text-sm">
                           {feature.description}
                         </p>
                       </div>
@@ -141,7 +134,7 @@ const Apps = () => {
                     href="https://play.google.com/store/apps/details?id=santi.wodbuster"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-blue-800 text-white px-6 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:scale-105 transition-all duration-300 shadow-md"
+                    className="bg-green-600 text-white px-6 py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:scale-105 transition-all duration-300 shadow-md"
                   >
                     <FaGooglePlay className="h-5 w-5" />
                     <span>Google Play</span>
@@ -162,8 +155,10 @@ const Apps = () => {
                     src="/movil-app.jpg"
                     alt="App móvil"
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
-                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/30 via-transparent to-black/50 flex flex-col justify-end p-4 text-white">
+                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/30 via-transparent to-black/60 flex flex-col justify-end p-4 text-white">
                     <h4 className="text-xl font-bold">Bekdoosan</h4>
                     <p className="text-sm opacity-80">Tu gimnasio en el bolsillo</p>
                   </div>
@@ -181,14 +176,14 @@ const Apps = () => {
           transition={{ duration: 0.6 }}
         >
           <h3 className="text-2xl font-bold text-center text-gray-900 dark:text-white mb-12">
-            Apps <span className="text-electric-green">Asociadas</span>
+            Apps <span className="text-emerald-500">Asociadas</span>
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {partnerApps.map((app, idx) => (
               <motion.div
                 key={idx}
-                className="bg-white dark:bg-dark-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                className="bg-white dark:bg-dark-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -200,6 +195,8 @@ const Apps = () => {
                       src={app.logoImg}
                       alt={app.name}
                       className="h-12 mx-auto object-contain"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
@@ -215,7 +212,7 @@ const Apps = () => {
                         key={i}
                         className="flex items-center justify-center text-sm"
                       >
-                        <div className="w-2 h-2 bg-electric-green rounded-full mr-2" />
+                        <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2" />
                         <span className="text-gray-600 dark:text-gray-400">
                           {benefit}
                         </span>
@@ -236,13 +233,12 @@ const Apps = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="bg-gradient-to-r from-electric-blue to-electric-green rounded-2xl p-8 text-white shadow-lg">
-            <h3 className="text-2xl font-bold mb-4">
+          <div className="bg-gradient-to-r from-sky-500 to-emerald-500 rounded-2xl p-8 text-white shadow-xl">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
               ¿Tu empresa tiene convenio?
             </h3>
-            <p className="mb-6 max-w-2xl mx-auto">
-              Consulta si tu empresa está asociada con alguna de nuestras apps
-              partners y disfruta de descuentos especiales en Bekdoosan.
+            <p className="mb-6 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+              Consulta si tu empresa está asociada con alguna de nuestras apps partners y disfruta de descuentos especiales en Bekdoosan.
             </p>
             <button
               onClick={() =>
@@ -250,7 +246,7 @@ const Apps = () => {
                   behavior: "smooth",
                 })
               }
-              className="bg-white text-electric-blue px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-md hover:scale-105"
+              className="bg-white text-sky-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-md hover:scale-105"
             >
               Consulta Aquí
             </button>
