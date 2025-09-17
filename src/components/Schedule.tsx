@@ -6,7 +6,7 @@ const Schedule = () => {
   const scheduleData: Record<string, { time: string; activity: string; type: string; icon: string }[]> = {
     LUNES: [
       { time: '9:15', activity: 'TRX', type: 'Entrenamiento funcional', icon: '🏋🏼' },
-      { time: '10:15', activity: 'CICLO INDOOR', type: '', icon: '🚴🏼' },
+     /*  { time: '10:15', activity: 'CICLO INDOOR', type: '', icon: '🚴🏼' }, */
       { time: '10:15', activity: 'YOGA', type: '', icon: '🧘🏼' },
       { time: '17:30', activity: 'TAEKWONDO', type: 'INFANTIL', icon: '🥋' },
       { time: '18:45', activity: 'TAEKWONDO', type: 'ALEVIN', icon: '🥋' },
@@ -15,7 +15,7 @@ const Schedule = () => {
     ],
     MARTES: [
       { time: '16:45', activity: 'YOGA', type: '', icon: '🧘🏼' },
-      { time: '18:45', activity: 'CICLO INDOOR', type: '', icon: '🚴🏼' },
+     /*  { time: '18:45', activity: 'CICLO INDOOR', type: '', icon: '🚴🏼' }, */
       { time: '19:00', activity: 'TRX', type: 'Entrenamiento funcional', icon: '🏋🏼' },
       { time: '20:00', activity: 'CICLO INDOOR', type: '', icon: '🚴🏼' },
       { time: '20:15', activity: 'KICK BOXING', type: '', icon: '🥊' },
@@ -23,7 +23,7 @@ const Schedule = () => {
     ],
     MIERCOLES: [
       { time: '9:15', activity: 'TRX', type: 'Entrenamiento funcional', icon: '🏋🏼' },
-      { time: '10:15', activity: 'CICLO INDOOR', type: '', icon: '🚴🏼' },
+      /* { time: '10:15', activity: 'CICLO INDOOR', type: '', icon: '🚴🏼' }, */
       { time: '10:15', activity: 'YOGA', type: '', icon: '🧘🏼' },
       { time: '17:30', activity: 'TAEKWONDO', type: 'INFANTIL', icon: '🥋' },
       { time: '18:45', activity: 'TAEKWONDO', type: 'ALEVIN', icon: '🥋' },
@@ -32,7 +32,7 @@ const Schedule = () => {
     ],
     JUEVES: [
       { time: '16:45', activity: 'YOGA', type: '', icon: '🧘🏼' },
-      { time: '18:45', activity: 'CICLO INDOOR', type: '', icon: '🚴🏼' },
+      /* { time: '18:45', activity: 'CICLO INDOOR', type: '', icon: '🚴🏼' }, */
       { time: '19:00', activity: 'TRX', type: 'Entrenamiento funcional', icon: '🏋🏼' },
       { time: '20:00', activity: 'CICLO INDOOR', type: '', icon: '🚴🏼' },
       { time: '20:15', activity: 'KICK BOXING', type: '', icon: '🥊' },
@@ -40,7 +40,7 @@ const Schedule = () => {
     ],
     VIERNES: [
       { time: '9:15', activity: 'TRX', type: 'Entrenamiento funcional', icon: '🏋🏼' },
-      { time: '10:15', activity: 'CICLO INDOOR', type: '', icon: '🚴🏼' },
+     /*  { time: '10:15', activity: 'CICLO INDOOR', type: '', icon: '🚴🏼' }, */
       { time: '17:30', activity: 'TAEKWONDO', type: 'INFANTIL', icon: '🥋' },
       { time: '18:45', activity: 'TAEKWONDO', type: 'ALEVIN', icon: '🥋' }
     ],
