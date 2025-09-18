@@ -1,17 +1,14 @@
 import React from 'react';
 import { Zap, Users, Lock, Wifi, Coffee, ShowerHead, Check, Dumbbell, Bike, Briefcase } from 'lucide-react';
 import { FaSpa } from 'react-icons/fa';
-import { MdSportsMma } from 'react-icons/md';
-import { MdOutlineSportsMartialArts } from 'react-icons/md';
-import { MdFitnessCenter } from 'react-icons/md';
-import { MdDirectionsRun } from 'react-icons/md';
+import { MdSportsMma, MdOutlineSportsMartialArts, MdFitnessCenter, MdDirectionsRun } from 'react-icons/md';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation, Autoplay } from 'swiper/modules';
 
-const Services = () => {
+const Services: React.FC = () => {
   const services = [
     {
       icon: <Zap className="h-12 w-12 text-sky-500" />,
@@ -80,14 +77,14 @@ const Services = () => {
       title: 'Sala Fitness',
       description:
         '🏋️‍♂️ El entrenamiento es fundamental no solo para mejorar el rendimiento físico, sino tambien para fomentar una vida más saludable y equilibrada 💪 ',
-      features: ['Sala de musculación guiada y libre', 'Fuerza, volumen o tonificar tu cuerpo', 'Te ayudamos a conseguir tus objetivos'],
+      features: ['Sala de musculación guiada y libre', 'Fuerza, volumen o tonificar tu cuerpo', 'Te ayudamos a conseguir tus objetivos'],
       color: 'pink-500'
     },
     {
       icon: <MdDirectionsRun className="h-12 w-12 text-green-500" />,
       title: 'Sala Cardio',
       description:
-        'En nuestra Sala de Cardio, mejora tu condición ideal para este entrenamiento. Cintas de correr, bicicletas, máquina de subir escaleras, remo, elípticas. Entrena de forma segura, para prevenir lesiones con nuestros planes de entrenamiento',
+        'En nuestra Sala de Cardio, mejora tu condición ideal para este entrenamiento. Cintas de correr, bicicletas, máquina de subir escaleras, remo, elípticas. Entrena de forma segura, para prevenir lesiones con nuestros planes de entrenamiento',
       features: ['Sala cardio guiada y libre', 'Alta quema de calorías', 'Fuerza y resistencia'],
       color: 'green-500'
     },
@@ -95,7 +92,7 @@ const Services = () => {
       icon: <Bike className="h-12 w-12 text-indigo-500" />,
       title: 'Ciclo indoor',
       description:
-        'Preparados para disfrutar de la mejor música pedaleando??? Experimenta la sensación de rodar con nosotros !!🚴🏼Clases vibrantes, motivantes y llenas de energía',
+        'Preparados para disfrutar de la mejor música pedaleando??? Experimenta la sensación de rodar con nosotros !!🚴🏼Clases vibrantes, motivantes y llenas de energía',
       features: ['Motivación y energía constante', 'Alta quema de calorías', 'Reducción del extres y mejora el animo'],
       color: 'indigo-500'
     }
@@ -116,6 +113,34 @@ const Services = () => {
       label: 'Wellhub (Gympass)'
     }
   ];
+
+  // Lista original restaurada de imágenes (todas las que tenías)
+  const instalaciones = [
+    '/imgs/IMG-20250806-WA0017.jpg',
+    '/Imagen de WhatsApp 2025-09-18 a las 10.53.15_6c50a073.jpg',
+    '/imgs/IMG-20250806-WA0018.jpg',
+    '/Imagen de WhatsApp 2025-09-18 a las 10.53.15_10fb8f7a.jpg',
+    '/Imagen de WhatsApp 2025-09-18 a las 12.43.46_6c74a27a.jpg',
+    '/imgs/IMG-20250806-WA0008.jpg',
+    '/imgs/IMG-20250806-WA0007.jpg',
+    '/imgs/IMG-20250806-WA0006.jpg',
+    '/imgs/IMG-20250806-WA0016.jpg',
+    '/imgs/IMG-20250806-WA0015.jpg',
+    '/imgs/IMG-20250806-WA0014.jpg',
+    '/imgs/IMG-20250806-WA0013.jpg',
+    '/imgs/IMG-20250806-WA0012.jpg',
+    '/imgs/IMG-20250806-WA0011.jpg',
+    '/imgs/IMG-20250806-WA0010.jpg',
+    '/imgs/IMG-20250806-WA0009.jpg'
+  ];
+
+  // Vídeos: mezcla mp4 locales y YouTube embed (añade o quita rutas según necesites)
+ // Vídeos Bekdoosan
+
+const videos = [
+  { type: 'youtube', src: 'https://www.youtube.com/embed/N4tieyG1h4o' },
+    { type: 'youtube', src: 'https://www.youtube.com/embed/qDmy-5UnfQg' }, 
+];
 
   return (
     <section id="services" className="py-16 sm:py-20 bg-gradient-to-b from-gray-50 via-white to-gray-100 dark:from-dark-surface dark:via-dark-bg dark:to-dark-surface">
@@ -214,21 +239,7 @@ const Services = () => {
                 1024: { slidesPerView: 3 }
               }}
             >
-              {[
-                '/imgs/IMG-20250806-WA0017.jpg',
-                '/imgs/IMG-20250806-WA0018.jpg',
-                '/imgs/IMG-20250806-WA0008.jpg',
-                '/imgs/IMG-20250806-WA0007.jpg',
-                '/imgs/IMG-20250806-WA0006.jpg',
-                '/imgs/IMG-20250806-WA0016.jpg',
-                '/imgs/IMG-20250806-WA0015.jpg',
-                '/imgs/IMG-20250806-WA0014.jpg',
-                '/imgs/IMG-20250806-WA0013.jpg',
-                '/imgs/IMG-20250806-WA0012.jpg',
-                '/imgs/IMG-20250806-WA0011.jpg',
-                '/imgs/IMG-20250806-WA0010.jpg',
-                '/imgs/IMG-20250806-WA0009.jpg'
-              ].map((src, index) => (
+              {instalaciones.map((src, index) => (
                 <SwiperSlide key={index}>
                   <img
                     src={src}
@@ -237,6 +248,46 @@ const Services = () => {
                     loading="lazy"
                     decoding="async"
                   />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
+          {/* VIDEOS BEKDOOSAN */}
+          <div className="my-8 sm:my-12">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 text-center">Videos <span className="text-sky-500">Bekdoosan</span></h3>
+            <Swiper
+              modules={[Navigation, Autoplay]}
+              spaceBetween={20}
+              slidesPerView={1}
+              navigation
+              autoplay={{ delay: 5000, disableOnInteraction: false }}
+              loop
+              breakpoints={{
+                640: { slidesPerView: 1 },
+                1024: { slidesPerView: 2 }
+              }}
+            >
+              {videos.map((video, index) => (
+                <SwiperSlide key={index}>
+                  <div className="w-full h-64 sm:h-72 md:h-80 rounded-xl overflow-hidden shadow-lg bg-black flex items-center justify-center">
+                    {video.type === 'mp4' ? (
+                      <video
+                        src={video.src}
+                        className="w-full h-full object-cover"
+                        controls
+                        preload="metadata"
+                      />
+                    ) : (
+                      <iframe
+                        src={video.src}
+                        title={`Video ${index + 1}`}
+                        className="w-full h-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    )}
+                  </div>
                 </SwiperSlide>
               ))}
             </Swiper>
