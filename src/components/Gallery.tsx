@@ -5,6 +5,7 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const images = [
+    { src: '/Imagen de WhatsApp 2025-09-26 a las 11.13.19_1fee05e3.jpg', alt: 'Área de cardio' },
      { src: '/Imagen de WhatsApp 2025-09-23 a las 21.59.49_967f871e.jpg', alt: 'Área de cardio' },
     { src: '/Imagen de WhatsApp 2025-09-23 a las 11.09.59_23a097e2.jpg', alt: 'Área de cardio' },
     { src: '/IMG-20250923-WA0003.jpg', alt: 'Área de cardio' },
