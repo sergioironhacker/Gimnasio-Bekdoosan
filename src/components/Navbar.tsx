@@ -45,7 +45,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <img 
-              src="favicon_2025.png" 
+              src="favicon.png" 
               alt="Bekdoosan Logo" 
               className="h-18 w-10 mr-3"
             />
