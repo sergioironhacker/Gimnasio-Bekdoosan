@@ -31,7 +31,7 @@ const Footer = () => {
           <div className="w-28 h-28 rounded-full bg-gradient-to-tr from-electric-blue to-electric-green p-[2px] shadow-lg shadow-electric-blue/30 mb-6">
             <div className="w-full h-full rounded-full bg-gray-950 flex items-center justify-center">
               <img
-                src="/bekdoosan_logo_transparente.png"
+                src="/favicon.png"
                 alt="Bekdoosan Logo"
                 className="max-h-16 object-contain"
               />
