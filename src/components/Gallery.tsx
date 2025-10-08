@@ -5,6 +5,11 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const images = [
+    { src: '/Imagen de WhatsApp 2025-10-08 a las 09.11.43_30a83ac5.jpg', alt: 'Área de cardio' },
+    { src: '/Imagen de WhatsApp 2025-10-07 a las 10.25.23_1a629dde.jpg', alt: 'Área de cardio' },
+    { src: '/Imagen de WhatsApp 2025-10-06 a las 12.01.23_e760b8cb.jpg', alt: 'Área de cardio' },
+    { src: '/Imagen de WhatsApp 2025-10-06 a las 12.01.23_d0fcaf76.jpg', alt: 'Área de cardio' },
+    { src: '/Imagen de WhatsApp 2025-10-06 a las 14.25.35_9c5b8fba.jpg', alt: 'Área de cardio' },
     { src: '/Imagen de WhatsApp 2025-09-26 a las 11.13.19_1fee05e3.jpg', alt: 'Área de cardio' },
      { src: '/Imagen de WhatsApp 2025-09-23 a las 21.59.49_967f871e.jpg', alt: 'Área de cardio' },
     { src: '/Imagen de WhatsApp 2025-09-23 a las 11.09.59_23a097e2.jpg', alt: 'Área de cardio' },
