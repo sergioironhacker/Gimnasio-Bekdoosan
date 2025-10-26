@@ -46,8 +46,9 @@ const Services: React.FC = () => {
 
   // 🎬 Vídeos Bekdoosan
   const videos = [
+    { src: '/Video de WhatsApp 2025-10-24 a las 21.24.12_365ca291.mp4' },
     { src: '/Video de WhatsApp 2025-10-08 a las 13.24.15_091cd3fe.mp4' },
-    { src: 'https://www.youtube.com/embed/WJcA-yAvgP8' },
+    { src: '/Video de WhatsApp 2025-10-24 a las 21.24.12_24492c8b.mp4' },
   ];
 
   return (
