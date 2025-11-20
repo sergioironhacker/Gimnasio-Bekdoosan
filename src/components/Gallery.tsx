@@ -10,7 +10,7 @@ const Gallery = () => {
 
 
 
-    
+
     { src: '/Imagen de WhatsApp 2025-11-20 a las 21.33.16_394cf25e.jpg', alt: 'Área de cardio' },
     { src: '/Imagen de WhatsApp 2025-11-20 a las 21.33.17_392238c0.jpg', alt: 'Área de cardio' },
     { src: '/Imagen de WhatsApp 2025-11-13 a las 21.39.43_5ce017a1.jpg', alt: 'Área de cardio' },
@@ -80,6 +80,7 @@ const Gallery = () => {
   return (
     <section id="gallery" className="py-20 bg-white dark:bg-dark-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Título */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Heart className="w-8 h-8 text-electric-blue" fill="currentColor" />
@@ -93,7 +94,7 @@ const Gallery = () => {
           </p>
         </div>
 
-        {/* Miniaturas en fila horizontal scrollable */}
+        {/* Miniaturas scrollable */}
         <div className="overflow-x-auto whitespace-nowrap flex gap-4 py-4 px-1 scrollbar-thin scrollbar-thumb-electric-blue/70 scrollbar-track-transparent">
           {images.map((image, index) => (
             <div
@@ -109,6 +110,46 @@ const Gallery = () => {
             </div>
           ))}
         </div>
+
+
+
+{/* Video centrado con título animado constantemente */}
+<div className="mt-12 flex flex-col items-center text-center">
+  <h3
+    className="text-2xl md:text-3xl font-bold text-electric-blue mb-3"
+    style={{
+      display: 'inline-block',
+      animation: 'float 2s ease-in-out infinite',
+    }}
+  >
+    Team Bekdoosan
+  </h3>
+
+  <video
+    controls
+    poster="/sliderfff.jpg" // Cambia por tu poster
+    className="w-full max-w-xs sm:max-w-sm md:max-w-md rounded-xl shadow-lg"
+  >
+    <source
+      src="/Video de WhatsApp 2025-11-20 a las 21.33.17_88f25a95.mp4"
+      type="video/mp4"
+    />
+    Tu navegador no soporta la reproducción de video.
+  </video>
+
+  {/* Animación keyframes inline usando style */}
+  <style>{`
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+  `}</style>
+</div>
+
+
+
+
       </div>
 
       {/* Modal */}
