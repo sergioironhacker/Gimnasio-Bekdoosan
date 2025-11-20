@@ -5,14 +5,22 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const images = [
+
+
+
+
+
+    
+    { src: '/Imagen de WhatsApp 2025-11-20 a las 21.33.16_394cf25e.jpg', alt: 'Área de cardio' },
+    { src: '/Imagen de WhatsApp 2025-11-20 a las 21.33.17_392238c0.jpg', alt: 'Área de cardio' },
     { src: '/Imagen de WhatsApp 2025-11-13 a las 21.39.43_5ce017a1.jpg', alt: 'Área de cardio' },
     { src: '/Imagen de WhatsApp 2025-11-13 a las 21.39.43_7f174d71.jpg', alt: 'Área de cardio' },
     { src: '/Imagen de WhatsApp 2025-11-13 a las 21.40.26_dc26a483.jpg', alt: 'Área de cardio' },
-     { src: '/Imagen de WhatsApp 2025-11-04 a las 22.28.01_cb292ab1.jpg', alt: 'Área de cardio' },
-      { src: '/Imagen de WhatsApp 2025-11-04 a las 22.28.17_aba1312d.jpg', alt: 'Área de cardio' },
-        { src: '/Imagen de WhatsApp 2025-11-03 a las 08.53.06_e52de9bd.jpg', alt: 'Área de cardio' },
+    { src: '/Imagen de WhatsApp 2025-11-04 a las 22.28.01_cb292ab1.jpg', alt: 'Área de cardio' },
+    { src: '/Imagen de WhatsApp 2025-11-04 a las 22.28.17_aba1312d.jpg', alt: 'Área de cardio' },
+    { src: '/Imagen de WhatsApp 2025-11-03 a las 08.53.06_e52de9bd.jpg', alt: 'Área de cardio' },
     { src: '/Imagen de WhatsApp 2025-10-23 a las 22.15.59_927fa29c.jpg', alt: 'Área de cardio' },
-     { src: '/Imagen de WhatsApp 2025-10-15 a las 14.16.24_2ccb6d8a.jpg', alt: 'Área de cardio' },
+    { src: '/Imagen de WhatsApp 2025-10-15 a las 14.16.24_2ccb6d8a.jpg', alt: 'Área de cardio' },
     { src: '/Imagen de WhatsApp 2025-10-12 a las 16.32.45_f4289ce5.jpg', alt: 'Área de cardio' },
     { src: '/Imagen de WhatsApp 2025-10-09 a las 21.32.00_ab66ad04.jpg', alt: 'Área de cardio' },
     { src: '/Imagen de WhatsApp 2025-10-08 a las 09.11.43_30a83ac5.jpg', alt: 'Área de cardio' },
@@ -21,13 +29,13 @@ const Gallery = () => {
     { src: '/Imagen de WhatsApp 2025-10-06 a las 12.01.23_d0fcaf76.jpg', alt: 'Área de cardio' },
     { src: '/Imagen de WhatsApp 2025-10-06 a las 14.25.35_9c5b8fba.jpg', alt: 'Área de cardio' },
     { src: '/Imagen de WhatsApp 2025-09-26 a las 11.13.19_1fee05e3.jpg', alt: 'Área de cardio' },
-     { src: '/Imagen de WhatsApp 2025-09-23 a las 21.59.49_967f871e.jpg', alt: 'Área de cardio' },
+    { src: '/Imagen de WhatsApp 2025-09-23 a las 21.59.49_967f871e.jpg', alt: 'Área de cardio' },
     { src: '/Imagen de WhatsApp 2025-09-23 a las 11.09.59_23a097e2.jpg', alt: 'Área de cardio' },
     { src: '/IMG-20250923-WA0003.jpg', alt: 'Área de cardio' },
     { src: '/IMG-20250923-WA0005.jpg', alt: 'Área de cardio' },
     { src: '/IMG-20250923-WA0004.jpg', alt: 'Área de cardio' },
     { src: '/IMG-20250904-WA0003.jpg', alt: 'Área de cardio' },
-    
+
 
 
 
