@@ -10,7 +10,7 @@ const Gallery = () => {
 
 
 
-
+ { src: '/Imagen de WhatsApp 2025-11-24 a las 08.53.53_98f60ca7.jpg', alt: 'Área de cardio' },
     { src: '/Imagen de WhatsApp 2025-11-20 a las 21.33.16_394cf25e.jpg', alt: 'Área de cardio' },
     { src: '/Imagen de WhatsApp 2025-11-20 a las 21.33.17_392238c0.jpg', alt: 'Área de cardio' },
     { src: '/Imagen de WhatsApp 2025-11-13 a las 21.39.43_5ce017a1.jpg', alt: 'Área de cardio' },
