@@ -5,10 +5,32 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const images = [
+     { src: '/WhatsApp Image 2025-12-16 at 15.34.53.jpeg', alt: 'Comida del gimansio' },
+     { src: '/WhatsApp Image 2025-12-16 at 11.33.22.jpeg', alt: 'Comida del gimansio' },
+     { src: '/WhatsApp Image 2025-12-16 at 11.33.38 (1).jpeg', alt: 'Comida del gimansio' },
+     { src: '/WhatsApp Video 2025-12-16 at 11.33.36.mp4', alt: 'Comida del gimansio' },
+     { src: '/WhatsApp Video 2025-12-16 at 11.33.37.mp4', alt: 'Cmida del gimansio' },
+     { src: '/WhatsApp Image 2025-12-16 at 11.33.38.jpeg', alt: 'Comida del gimansio' },
+     { src: '/WhatsApp Image 2025-12-16 at 11.35.37.jpeg', alt: 'Comida del gimansio' },
+     { src: '/WhatsApp Image 2025-12-16 at 11.33.39 (1).jpeg', alt: 'Comida del gimansio' },
+     { src: '/WhatsApp Image 2025-12-16 at 11.33.24.jpeg', alt: 'Comida del gimansio' },
+     { src: '/WhatsApp Image 2025-12-16 at 11.43.26.jpeg', alt: 'Comida del gimansio' },
+     { src: '/WhatsApp Image 2025-12-16 at 11.51.43.jpeg', alt: 'Comida del gimansio' },
+     { src: '/WhatsApp Image 2025-12-16 at 11.51.54.jpeg', alt: 'Comida del gimansio' },
+     { src: '/WhatsApp Image 2025-12-16 at 11.33.39 (2).jpeg', alt: 'Comida del gimansio' },
+     { src: '/WhatsApp Image 2025-12-16 at 11.33.39.jpeg', alt: 'Comida del gimansio' },
+     { src: '/WhatsApp Image 2025-12-16 at 11.33.25.jpeg', alt: 'Comida del gimansio' },
+     { src: '/WhatsApp Image 2025-12-16 at 11.33.26.jpeg', alt: 'Comida del gimansio' },
+     { src: '/WhatsApp Image 2025-12-16 at 11.33.40 (1).jpeg', alt: 'Comida del gimansio' },
+     { src: '/WhatsApp Image 2025-12-16 at 11.33.27.jpeg', alt: 'Comida del gimansio' },
+     { src: '/WhatsApp Image 2025-12-16 at 15.34.52.jpeg', alt: 'Comida del gimansio' },
+     { src: '/WhatsApp Image 2025-12-16 at 11.33.40.jpeg', alt: 'Comida del gimansio' },
+     { src: '/WhatsApp Image 2025-12-16 at 11.33.37.jpeg', alt: 'Comida del gimansio' },
 
 
-
-
+ 
+ { src: '/Imagen de WhatsApp 2025-11-29 a las 20.31.57_06616cc7.jpg', alt: 'Área de cardio' },
+ { src: '/Imagen de WhatsApp 2025-11-29 a las 20.31.58_196c832b.jpg', alt: 'Área de cardio' },
 
  { src: '/Imagen de WhatsApp 2025-11-24 a las 08.53.53_98f60ca7.jpg', alt: 'Área de cardio' },
     { src: '/Imagen de WhatsApp 2025-11-20 a las 21.33.16_394cf25e.jpg', alt: 'Área de cardio' },

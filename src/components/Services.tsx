@@ -22,6 +22,8 @@ const Services: React.FC = () => {
   ];
 
   const videos = [
+    { src: '/Video de WhatsApp 2025-12-05 a las 13.50.37_3b46ad71.mp4', poster: '/july.jpg' },
+    { src: '/Video de WhatsApp 2025-11-29 a las 20.31.58_3e2435cc.mp4', poster: '/ff.jpg' },
     { src: '/Video de WhatsApp 2025-11-20 a las 21.33.17_88f25a95.mp4', poster: '/slider.jpg' },
     { src: '/Video de WhatsApp 2025-10-24 a las 21.24.12_365ca291.mp4', poster: '/slider2.jpg' },
     { src: '/Video de WhatsApp 2025-10-08 a las 13.24.15_091cd3fe.mp4', poster: '/slider3.jpg' },
