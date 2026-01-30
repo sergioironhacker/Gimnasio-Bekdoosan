@@ -22,6 +22,20 @@ const Services: React.FC = () => {
   ];
 
   const videos = [
+
+
+     { src: '/box.mp4', poster: '/july.jpg' },
+
+
+      { src: '/dsd.mp4', poster: '/july.jpg' },
+      { src: '/ds.mp4', poster: '/a4.jpg' },
+        { src: '/d.mp4', poster: '/mente.jpg' },
+
+
+
+
+     { src: '/WhatsApp Video 2025-12-16 at 11.33.37.mp4', poster: '/imgs/Captura de pantalla 2025-12-16 154926.png' },
+     
     { src: '/Video de WhatsApp 2025-12-05 a las 13.50.37_3b46ad71.mp4', poster: '/july.jpg' },
     { src: '/Video de WhatsApp 2025-11-29 a las 20.31.58_3e2435cc.mp4', poster: '/ff.jpg' },
     { src: '/Video de WhatsApp 2025-11-20 a las 21.33.17_88f25a95.mp4', poster: '/slider.jpg' },
